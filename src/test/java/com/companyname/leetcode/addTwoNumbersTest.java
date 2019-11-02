@@ -25,7 +25,7 @@ public class addTwoNumbersTest extends TestCase {
     testResult.add(0);
     testResult.add(8);
      
-    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbers(l1n1, l2n1);
+    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
     while (result != null) {
       actualResult.add(result.val);
       result = result.next;
@@ -42,7 +42,7 @@ public class addTwoNumbersTest extends TestCase {
     testResult.add(0);
     testResult.add(1);
 
-    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbers(l1n1, l2n1);
+    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
     while (result != null) {
       actualResult.add(result.val);
       result = result.next;

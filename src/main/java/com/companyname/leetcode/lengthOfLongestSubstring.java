@@ -7,7 +7,7 @@ Given a string, find the length of the longest substring without repeating chara
 */ 
 
 public class lengthOfLongestSubstring {
-  public static int lengthOfLongestSubstring(String s) {
+  public static int lengthOfLongestSubstringSolution(String s) {
     int longest = 0;
     int length;
     

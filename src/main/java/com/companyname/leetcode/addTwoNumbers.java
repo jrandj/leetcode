@@ -14,7 +14,7 @@ public class addTwoNumbers {
     ListNode(int x) { val = x; }
    }
   
-  public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+  public static ListNode addTwoNumbersSolution(ListNode l1, ListNode l2) {
     ListNode dummyHead = new ListNode(0);
     ListNode l3 = dummyHead;
     int l1Val, l2Val, sum;

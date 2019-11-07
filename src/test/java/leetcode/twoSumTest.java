@@ -1,4 +1,4 @@
-package com.companyname.leetcode;
+package leetcode;
 
 import java.util.Arrays;
 import junit.framework.TestCase;
@@ -10,7 +10,7 @@ public class twoSumTest extends TestCase {
     int target = 9;
     int[] testResult = {0, 1};
 
-    result = com.companyname.leetcode.twoSum.twoSumSolution(nums, target);
+    result = leetcode.twoSum.twoSumSolution(nums, target);
     assertEquals(Arrays.toString(testResult), Arrays.toString(result));
 }
 
@@ -20,7 +20,7 @@ public class twoSumTest extends TestCase {
       int target = 6;
       int[] testResult = {0, 2};
   
-      result = com.companyname.leetcode.twoSum.twoSumSolution(nums, target);
+      result = leetcode.twoSum.twoSumSolution(nums, target);
       assertEquals(Arrays.toString(testResult), Arrays.toString(result));
   }
   
@@ -31,7 +31,7 @@ public class twoSumTest extends TestCase {
       int target = 10;
       int[] testResult = {1, 2};
   
-      result = com.companyname.leetcode.twoSum.twoSumSolution(nums, target);
+      result = leetcode.twoSum.twoSumSolution(nums, target);
       assertEquals(Arrays.toString(testResult), Arrays.toString(result));
   }
 }

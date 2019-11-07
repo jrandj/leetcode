@@ -1,8 +1,8 @@
-package com.companyname.leetcode;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.companyname.leetcode.addTwoNumbers.ListNode;
+import leetcode.addTwoNumbers.ListNode;
 import junit.framework.TestCase;
 
 public class addTwoNumbersTest extends TestCase {
@@ -25,7 +25,7 @@ public class addTwoNumbersTest extends TestCase {
     testResult.add(0);
     testResult.add(8);
      
-    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
+    ListNode result = leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
     while (result != null) {
       actualResult.add(result.val);
       result = result.next;
@@ -42,7 +42,7 @@ public class addTwoNumbersTest extends TestCase {
     testResult.add(0);
     testResult.add(1);
 
-    ListNode result = com.companyname.leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
+    ListNode result = leetcode.addTwoNumbers.addTwoNumbersSolution(l1n1, l2n1);
     while (result != null) {
       actualResult.add(result.val);
       result = result.next;

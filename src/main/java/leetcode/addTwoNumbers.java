@@ -1,4 +1,4 @@
-package com.companyname.leetcode;
+package leetcode;
 
 
 /**

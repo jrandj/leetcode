@@ -54,7 +54,7 @@ class longestPalindrome {
         break;
       }
     }
-    // 1 has been subtracted from startIndex and endIndex, so we need add 1 back when we return
+    // 1 has been subtracted from startIndex and endIndex, so we need to add 1 back when we return
     // (noting that the substring method goes from start to end - 1)
     return s.substring(startIndex + 1, endIndex);
   }

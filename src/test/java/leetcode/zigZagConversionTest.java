@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.Arrays;
 import junit.framework.TestCase;
 
 public class zigZagConversionTest extends TestCase {
@@ -9,7 +8,7 @@ public class zigZagConversionTest extends TestCase {
     String result = "PAHNAPLSIIGYIR";
     String inputString = "PAYPALISHIRING";
     String outputString;
-    outputString = leetcode.zigZagConversion.convert(inputString, numRows);
+    outputString = leetcode.ZigZagConversion.convert(inputString, numRows);
     assertEquals(outputString, result);
   }
 
@@ -18,16 +17,16 @@ public class zigZagConversionTest extends TestCase {
     String result = "PINALSIGYAHRPI";
     String inputString = "PAYPALISHIRING";
     String outputString;
-    outputString = leetcode.zigZagConversion.convert(inputString, numRows);
+    outputString = leetcode.ZigZagConversion.convert(inputString, numRows);
     assertEquals(outputString, result);
   }
-  
+
   public void testzigZagConversion3() {
     int numRows = 1;
     String result = "AB";
     String inputString = "AB";
     String outputString;
-    outputString = leetcode.zigZagConversion.convert(inputString, numRows);
+    outputString = leetcode.ZigZagConversion.convert(inputString, numRows);
     assertEquals(outputString, result);
   }
 }

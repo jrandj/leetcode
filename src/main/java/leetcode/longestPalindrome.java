@@ -4,7 +4,7 @@ package leetcode;
  * Given a string s, find the longest palindromic substring in s. You may assume that the maximum
  * length of s is 1000.
  */
-class longestPalindrome {
+public class LongestPalindrome {
   /**
    * The brute force solution. Find every substring and find the longest where it equals its
    * reverse.

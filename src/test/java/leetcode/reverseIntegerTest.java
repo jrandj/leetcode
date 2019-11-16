@@ -7,7 +7,7 @@ public class reverseIntegerTest extends TestCase {
     int result = 321;
     int input = 123;
     int output;
-    output = leetcode.reverseInteger.reverse(input);
+    output = leetcode.ReverseInteger.reverse(input);
     assertEquals(output, result);
   }
 
@@ -15,7 +15,7 @@ public class reverseIntegerTest extends TestCase {
     int result = -123;
     int input = -321;
     int output;
-    output = leetcode.reverseInteger.reverse(input);
+    output = leetcode.ReverseInteger.reverse(input);
     assertEquals(output, result);
   }
 
@@ -23,7 +23,7 @@ public class reverseIntegerTest extends TestCase {
     int result = 21;
     int input = 120;
     int output;
-    output = leetcode.reverseInteger.reverse(input);
+    output = leetcode.ReverseInteger.reverse(input);
     assertEquals(output, result);
   }
 
@@ -31,7 +31,7 @@ public class reverseIntegerTest extends TestCase {
     int result = 0;
     int input = 0;
     int output;
-    output = leetcode.reverseInteger.reverse(input);
+    output = leetcode.ReverseInteger.reverse(input);
     assertEquals(output, result);
   }
 
@@ -39,7 +39,7 @@ public class reverseIntegerTest extends TestCase {
     int result = 0;
     int input = 1534236469;
     int output;
-    output = leetcode.reverseInteger.reverse(input);
+    output = leetcode.ReverseInteger.reverse(input);
     assertEquals(output, result);
   }
 }

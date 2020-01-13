@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class palindromeNumberTest extends TestCase {
+public class PalindromeNumberTest extends TestCase {
   public void testPalindromeNumber1() {
     int input = 121;
     Boolean expectedResult = true;

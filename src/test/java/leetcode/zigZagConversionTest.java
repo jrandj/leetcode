@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class zigZagConversionTest extends TestCase {
+public class ZigZagConversionTest extends TestCase {
   public void testzigZagConversion1() {
     int numRows = 3;
     String result = "PAHNAPLSIIGYIR";

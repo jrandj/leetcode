@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class longestPalindromeTest extends TestCase {
+public class LongestPalindromeTest extends TestCase {
 
   public void testlongestPalindrome1() {
     String myString = "babad";

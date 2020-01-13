@@ -5,7 +5,7 @@ import java.util.List;
 import leetcode.AddTwoNumbers.ListNode;
 import junit.framework.TestCase;
 
-public class addTwoNumbersTest extends TestCase {
+public class AddTwoNumbersTest extends TestCase {
   public void testaddTwoNumbers1() {
     ListNode l1n1 = new ListNode(2);
     ListNode l1n2 = new ListNode(4);

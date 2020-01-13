@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class medianOfTwoSortedArraysTest extends TestCase {
+public class MedianOfTwoSortedArraysTest extends TestCase {
 
   public void testfindMedianSortedArrays1() {
     int[] nums1 = {1, 3};

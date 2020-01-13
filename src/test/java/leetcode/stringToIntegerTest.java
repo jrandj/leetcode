@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class stringToIntegerTest extends TestCase {
+public class StringToIntegerTest extends TestCase {
   public void testStringToInteger1() {
     int result = 42;
     String input = "42";

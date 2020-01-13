@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class reverseIntegerTest extends TestCase {
+public class ReverseIntegerTest extends TestCase {
   public void testReverseInteger1() {
     int result = 321;
     int input = 123;

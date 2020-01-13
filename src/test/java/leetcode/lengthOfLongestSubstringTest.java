@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class lengthOfLongestSubstringTest extends TestCase {
+public class LengthOfLongestSubstringTest extends TestCase {
   public void testlengthOfLongestSubstring1() {
     String testString = "abcabcbb";
     int testResult = 3;

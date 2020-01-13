@@ -3,7 +3,7 @@ package leetcode;
 import java.util.Arrays;
 import junit.framework.TestCase;
 
-public class twoSumTest extends TestCase {
+public class TwoSumTest extends TestCase {
   public void testtwoSumExpectedResult1() {
     int[] result;
     int[] nums = {2, 7, 11, 15};

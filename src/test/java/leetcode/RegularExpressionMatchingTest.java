@@ -2,7 +2,7 @@ package leetcode;
 
 import junit.framework.TestCase;
 
-public class TestRegularExpressionMatching extends TestCase {
+public class RegularExpressionMatchingTest extends TestCase {
 
   public void testRegularExpressionMatching1() {
     Boolean result = false;

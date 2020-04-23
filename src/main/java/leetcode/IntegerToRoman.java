@@ -1,7 +1,5 @@
 package leetcode;
 
-import org.apache.commons.lang.StringUtils;
-
 /**
  * Roman numerals are represented by seven different symbols: I, V, X, L, C, D
  * and M.
@@ -32,28 +30,16 @@ class IntegerToRoman {
 	 * @return the String representation of the Roman numeral
 	 */
 	public static String intToRoman(int num) {
-		int[] n = { 1000, 500, 100, 50, 10, 5, 1 };
-		char[] symbols = { 'M', 'D', 'C', 'L', 'X', 'V', 'I' };
+		int[] n = { 1000, 900, 500, 490, 450, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+		String[] symbols = { "M", "CM", "D", "CDXC", "CDL", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
 		String returnString = "";
-		int sequential = 0;
 
 		for (int i = 0; i < n.length; i++) {
 			while (num / n[i] != 0) {
-				// System.out.println("num " + num + " i " + i + " n[i] " + n[i] + " (num % n[i]): " + num % n[i] + " (num / n[i]) " + num / n[i]);
-				sequential++;
+				returnString += symbols[i];
 				num -= n[i];
 			}
 
-			// if (num % n[i]) > 3*n[i+1]
-			if (sequential > 3) {
-				num += 4 * n[i];
-				returnString = returnString + symbols[i] + symbols[i - 1];
-
-			} else if (sequential > 0) {
-				returnString = StringUtils.repeat(symbols[i] + "", sequential);
-			}
-			sequential = 0;
-			// System.out.println("mod: " + num / n[i] + " returnString " + returnString);
 		}
 		return returnString;
 	}

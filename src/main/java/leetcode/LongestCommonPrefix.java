@@ -25,10 +25,26 @@ class LongestCommonPrefix {
 		int index = 0;
 
 		for (int i = 0; i < strs.length; i++) {
-			char currentChar = strs[i].charAt(index);
+			char currentChar;
+			if (strs[i].equals("")) {
+				return "";
+			}
 
+			if (index > strs[i].length() - 1) {
+				return longestCommon;
+			}
+
+			currentChar = strs[i].charAt(index);
 			for (int j = 0; j < strs.length; j++) {
+				if (strs[j].equals("")) {
+					return "";
+				}
+				
+				if (index > strs[j].length() - 1) {
+					return longestCommon;
+				}
 				if (strs[j].charAt(index) != currentChar) {
+
 					// If all the other strings don't also have currentChar, we found the longest
 					return longestCommon.toString();
 				}

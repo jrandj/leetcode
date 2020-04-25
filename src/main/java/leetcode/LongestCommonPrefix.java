@@ -21,39 +21,39 @@ class LongestCommonPrefix {
 			return "";
 		}
 
-		String longestCommon = "";
-		int index = 0;
-
+		// find shortest string (longest substring will be the shortest string)
+		int shortestString = 0;
+		int shortestStringIndex = 0;
 		for (int i = 0; i < strs.length; i++) {
-			char currentChar;
-			if (strs[i].equals("")) {
-				return "";
+			if (strs[i].length() < shortestString) {
+				shortestString = strs[i].length();
+				shortestStringIndex = i;
 			}
+		}
 
-			if (index > strs[i].length() - 1) {
-				return longestCommon;
-			}
+		int shortestStringCharacterIndex = 0; // start from the beginning of the shortest string
+		String longestCommon = "";
+		char currentChar;
 
-			currentChar = strs[i].charAt(index);
-			for (int j = 0; j < strs.length; j++) {
+		for (int i = 0; i < strs[shortestStringIndex].length(); i++) { // for each character in the shortest string
+			currentChar = strs[shortestStringIndex].charAt(shortestStringCharacterIndex);
+			for (int j = 0; j < strs.length; j++) { // is this character in every other string?
 				if (strs[j].equals("")) {
 					return "";
 				}
-				
-				if (index > strs[j].length() - 1) {
+
+				if (shortestStringCharacterIndex > strs[j].length() - 1) {
 					return longestCommon;
 				}
-				if (strs[j].charAt(index) != currentChar) {
 
-					// If all the other strings don't also have currentChar, we found the longest
+				if (strs[j].charAt(shortestStringCharacterIndex) != currentChar) {
+					// If all the other strings don't this character, we have found the longest
 					return longestCommon.toString();
 				}
 			}
-			// phew, made it! Let's add another character next time
-			index++;
+			shortestStringCharacterIndex++;
 			longestCommon += currentChar;
 		}
-
 		return longestCommon.toString();
 	}
 }

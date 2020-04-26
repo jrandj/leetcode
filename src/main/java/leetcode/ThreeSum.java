@@ -26,19 +26,18 @@ class ThreeSum {
 	public static List<List<Integer>> threeSum(int[] nums) {
 		// sort the list as the bounds search requires it
 		Arrays.sort(nums);
-		List<List<Integer>> outputArray = new LinkedList();
+		List<List<Integer>> outputArray = new LinkedList<List<Integer>>();
 		// for each number, look for 2 subsequent numbers that give a total sum of 0
 		for (int i = 0; i < nums.length - 2; i++) {
+			if (nums[i] > 0) {
+				break;
+			}
 			// if a number is the same as the previous number skip it
-			if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) { 
-				if(nums[i] > 0) {
-					break;
-				}
-				
+			if (i == 0 || nums[i] != nums[i - 1]) {
 				// low and high are the bounds for the subsequent 2 numbers
 				int low = i + 1;
 				int high = nums.length - 1;
-				int sum = 0-nums[i];
+				int sum = 0 - nums[i];
 				while (low < high) {
 					if (nums[low] + nums[high] == sum) {
 						outputArray.add(Arrays.asList(nums[i], nums[low], nums[high]));

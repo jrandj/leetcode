@@ -17,7 +17,7 @@ import java.util.List;
  */
 class ThreeSum {
 	/**
-	 * Return longest common prefix from an array of Strings
+	 * Return unique triplets that sum to zero.
 	 *
 	 * @param nums the array of ints
 	 * @return a list of lists that satisfy the criteria

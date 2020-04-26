@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -22,7 +24,43 @@ class ThreeSum {
 	 */
 
 	public static List<List<Integer>> threeSum(int[] nums) {
-
-		return null;
+		// sort the list as the bounds search requires it
+		Arrays.sort(nums);
+		List<List<Integer>> outputArray = new LinkedList();
+		// for each number, look for 2 subsequent numbers that give a total sum of 0
+		for (int i = 0; i < nums.length - 2; i++) {
+			// if a number is the same as the previous number skip it
+			if (i == 0 || (i > 0 && nums[i] != nums[i - 1])) { 
+				if(nums[i] > 0) {
+					break;
+				}
+				
+				// low and high are the bounds for the subsequent 2 numbers
+				int low = i + 1;
+				int high = nums.length - 1;
+				int sum = 0-nums[i];
+				while (low < high) {
+					if (nums[low] + nums[high] == sum) {
+						outputArray.add(Arrays.asList(nums[i], nums[low], nums[high]));
+						System.out.println("OutputArray:" + outputArray);
+						// increment search bounds but skip over duplicates first
+						// if a number is the same as the previous number skip it
+						while (low < high && nums[low] == nums[low + 1]) {
+							low++;
+						}
+						// if a number is the same as the previous number skip it
+						while (low < high && nums[high] == nums[high - 1]) {
+							high--;
+						}
+						low++;
+						high--;
+					} else if (nums[low] + nums[high] > sum) { // increment search bounds
+						high--;
+					} else
+						low++;
+				}
+			}
+		}
+		return outputArray;
 	}
 }

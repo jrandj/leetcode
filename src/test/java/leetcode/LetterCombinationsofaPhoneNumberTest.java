@@ -9,7 +9,7 @@ import junit.framework.Assert;
 import junit.framework.TestCase;
 
 public class LetterCombinationsofaPhoneNumberTest extends TestCase {
-	public void testthreeSumClosest1() {
+	public void testLetterCombinationsofaPhoneNumber1() {
 		String digits = "23";
 		List<String> result = leetcode.LetterCombinationsofaPhoneNumber.letterCombinations(digits);
 		List<String> testResult = Arrays.asList("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf");
@@ -17,7 +17,7 @@ public class LetterCombinationsofaPhoneNumberTest extends TestCase {
 				CollectionUtils.getCardinalityMap(result));
 	}
 
-	public void testthreeSumClosest2() {
+	public void testLetterCombinationsofaPhoneNumber2() {
 		String digits = "2";
 		List<String> result = leetcode.LetterCombinationsofaPhoneNumber.letterCombinations(digits);
 		List<String> testResult = Arrays.asList("a", "b", "c");
@@ -25,4 +25,13 @@ public class LetterCombinationsofaPhoneNumberTest extends TestCase {
 				CollectionUtils.getCardinalityMap(result));
 	}
 
+	public void testLetterCombinationsofaPhoneNumber3() {
+		String digits = "234";
+		List<String> result = leetcode.LetterCombinationsofaPhoneNumber.letterCombinations(digits);
+		List<String> testResult = Arrays.asList("adg", "adh", "adi", "aeg", "aeh", "aei", "afg", "afh", "afi", "bdg",
+				"bdh", "bdi", "beg", "beh", "bei", "bfg", "bfh", "bfi", "cdg", "cdh", "cdi", "ceg", "ceh", "cei", "cfg",
+				"cfh", "cfi");
+		Assert.assertEquals("Verify same list", CollectionUtils.getCardinalityMap(testResult),
+				CollectionUtils.getCardinalityMap(result));
+	}
 }

@@ -16,10 +16,10 @@ public class GenerateParenthesesTest extends TestCase {
 		Assert.assertEquals(testResult, result);
 	}
 	
-//	public void testGenerateParenthesesTest2() {
-//		int n = 3;
-//		List<String> result = leetcode.GenerateParentheses.generateParenthesis(n);
-//		List<String> testResult = Arrays.asList("((()))", "(()())", "(())()", "()(())", "()()()");
-//		Assert.assertEquals(testResult, result);
-//	}
+	public void testGenerateParenthesesTest2() {
+		int n = 3;
+		List<String> result = leetcode.GenerateParentheses.generateParenthesis(n);
+		List<String> testResult = Arrays.asList("((()))", "(()())", "(())()", "()(())", "()()()");
+		Assert.assertEquals(testResult, result);
+	}
 }

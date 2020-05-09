@@ -1,9 +1,6 @@
 package leetcode;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Map;
-import java.util.Set;
+import java.util.Stack;
 
 /**
  * Given a string containing just the characters '(', ')', '{', '}', '[' and
@@ -23,39 +20,42 @@ class ValidParentheses {
 	 * @return if the input String is a valid input string
 	 */
 	public static boolean isValid(String s) {
+		Stack<Character> myStack = new Stack<Character>();
+				
+		for (int i = 0; i < s.length(); i++) {
 
-		int leftPointer = 0;
-		int rightPointer = 0;
-
-		if (s.length() % 2 == 0) {
-			leftPointer = s.length() / 2 - 1;
-			rightPointer = s.length() / 2;
-		} else {
+			char ch = s.charAt(i);
+			if (ch == '(' || ch == '[' || ch == '{') {
+				myStack.add(ch);
+			} else if (ch == ')' || ch == ']' || ch == '}') {
+				if (myStack.size() == 0) {
+					return false;
+				}
+				switch (ch) {
+				case ')':
+					if (myStack.peek() != '(') {
+						return false;
+					}
+					break;
+				case ']':
+					if (myStack.peek() != '[') {
+						return false;
+					}
+					break;
+				case '}':
+					if (myStack.peek() != '{') {
+						return false;
+					}
+					break;
+				}
+				myStack.pop();
+			} else {
+				return false;
+			}
+		}
+		if (myStack.size() != 0) {
 			return false;
 		}
-
-		while (isSubStringValid(s, leftPointer, rightPointer)) {
-			if (rightPointer == s.length() - 1 && leftPointer == 0) {
-				return true;
-			}
-			rightPointer += 1;
-			leftPointer -= 1;
-
-		}
-
-		return false;
-
-	}
-
-	public static boolean isSubStringValid(String s, int leftPointer, int rightPointer) {
-
-		if (s.charAt(leftPointer) == '{' && s.charAt(leftPointer) == '}') {
-			return true;
-		} else if (s.charAt(leftPointer) == '(' && s.charAt(rightPointer) == ')') {
-			return true;
-		} else if (s.charAt(leftPointer) == '[' && s.charAt(rightPointer) == ']') {
-			return true;
-		}
-		return false;
+		return true;
 	}
 }

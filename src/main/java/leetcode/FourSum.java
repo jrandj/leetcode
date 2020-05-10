@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -15,25 +17,55 @@ class FourSum {
 	/**
 	 * Return valid 4sum solutions.
 	 *
-	 * @param s the input array
+	 * @param s      the input array
 	 * @param target the target
 	 * @return the list of valid 4sum solutions
 	 */
-    public static List<List<Integer>> fourSum(int[] nums, int target) {
-    	
-    	// sort nums
-    	// left pointer and right pointer
-    	// left pointer at zero right pointer at len nums
-    	// 
-    	// 1, 0, -1, 0, -2, 2
-    	// -2, -1, 0, 0, 1, 2
-    	// for each number, look for 3 subsequent numbers that give a total sum of 0
-    	
-    	
-    	
-    	
-    	
-    	
-    	return null;
-    }
+	public static List<List<Integer>> fourSum(int[] nums, int target) {
+		List<List<Integer>> outputArray = new ArrayList<List<Integer>>();
+
+		if (nums == null || nums.length < 4) {
+			return outputArray;
+		}
+
+		Arrays.sort(nums);
+
+		for (int i = 0; i < nums.length; i++) {
+			for (int j = i + 1; j < nums.length; j++) {
+				int lp = j + 1;
+				int rp = nums.length - 1;
+				while (lp < rp) {
+					if (nums[i] + nums[j] + nums[lp] + nums[rp] == target) {
+						outputArray.add(Arrays.asList(nums[i], nums[j], nums[lp], nums[rp]));
+
+						// skip duplicates
+						while (rp < nums.length - 1 && nums[lp] == nums[lp + 1]) {
+							lp++;
+						}
+						while (lp < rp + 1 && nums[rp] == nums[rp - 1]) {
+							rp--;
+						}
+						rp--;
+						lp++;
+
+					} else if (nums[i] + nums[j] + nums[lp] + nums[rp] > target) {
+						rp--;
+					} else if (nums[i] + nums[j] + nums[lp] + nums[rp] < target) {
+						lp++;
+					}
+				}
+
+				// skip duplicates
+				while (j < nums.length - 1 && nums[j] == nums[j + 1]) {
+					j++;
+				}
+			}
+
+			// skip duplicates
+			while (i < nums.length - 1 && nums[i] == nums[i + 1]) {
+				i++;
+			}
+		}
+		return outputArray;
+	}
 }

@@ -26,28 +26,50 @@ class RemoveNthNodeFromEndofList {
 	 * @return head the linked list head node
 	 */
 	public static ListNode removeNthFromEnd(ListNode head, int n) {
-		// find the index of the nth element
-		// if index, cut node out of list
+		ListNode dummyHead = new ListNode(0);
+		dummyHead = head;
+		int i = 0;
 
+		int len = counter(head, n);
+		int index = len - n;
+
+		if (head == null || index < 0) {
+			return null;
+		}
+
+		if (index == 0) {
+			return head.next;
+		}
+
+		while (dummyHead != null) {
+			// want to skip at "the one before"
+			if (i == index - 1) {
+				dummyHead.next = dummyHead.next.next;
+			}
+			dummyHead = dummyHead.next;
+			i++;
+		}
+
+		return head;
+	}
+
+	/**
+	 * Count the number of elements in a linked list.
+	 *
+	 * @param head the linked list head node
+	 * @param n    the n'th node
+	 * @return len the length of the linked list
+	 */
+	public static int counter(ListNode head, int n) {
+		ListNode dummyHead = new ListNode(0);
+		dummyHead.next = head;
 		int len = 0;
-		ListNode dummyHead = head;
 		while (dummyHead.next != null) {
 			dummyHead = dummyHead.next;
 			len++;
 		}
 
-		int index = len - n;
-		len = 0;
-		
-		dummyHead = head;
-		while (index != len) {
-			dummyHead = dummyHead.next;
-			len++;
-		}
-		
-		head = dummyHead.next.next;
-
-		return head;
+		return len;
 	}
 }
 

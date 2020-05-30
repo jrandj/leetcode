@@ -64,5 +64,4 @@ public class InsertionSortListTest extends TestCase {
 			return false;
 		return CompareLists(headA.next, headB.next);
 	}
-
 }

@@ -17,7 +17,7 @@ class InsertionSortList {
 	 * @param head the head of the unsorted linked list
 	 * @return head the head of sorted linked list
 	 * 
-	 * Time: O(n^2), Space: O(1)
+	 *         Time: O(n^2), Space: O(1)
 	 */
 	public ListNode insertionSortList(ListNode head) {
 		ListNode dummy = new ListNode(0);
@@ -32,15 +32,15 @@ class InsertionSortList {
 			// iterate over the (growing) output list
 			while (p.next != null && p.next.val <= cur.val) {
 				p = p.next;
-			} 
+			}
 			// p.next.val is now > cur.val so insert it after cur
 			cur.next = p.next;
-			
+
 			// cur is now the head
 			p.next = cur;
-			
+
 			// iterate over the input list
-			cur = next; // why can't we have cur = cur.next and get rid of line 30?
+			cur = next;
 		}
 
 		return dummy.next;

@@ -9,7 +9,6 @@ import junit.framework.TestCase;
 public class GenerateParenthesesTest extends TestCase {
     /**
      * The first test for GenerateParentheses.
-     *
      */
     public void testGenerateParenthesesTest1() {
         int n = 1;
@@ -21,7 +20,6 @@ public class GenerateParenthesesTest extends TestCase {
 
     /**
      * The second test for GenerateParentheses.
-     *
      */
     public void testGenerateParenthesesTest2() {
         int n = 3;

@@ -7,7 +7,6 @@ import leetcode.AddTwoNumbers.ListNode;
 public class InsertionSortListTest extends TestCase {
     /**
      * The first test for InsertionSortList.
-     *
      */
     public void testInsertionSortList1() {
         ListNode l1n1 = new ListNode(4);
@@ -33,7 +32,6 @@ public class InsertionSortListTest extends TestCase {
 
     /**
      * The second test for InsertionSortList.
-     *
      */
     public void testInsertionSortList2() {
         ListNode l1n1 = new ListNode(-1);

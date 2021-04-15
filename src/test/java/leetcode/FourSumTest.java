@@ -10,7 +10,6 @@ import junit.framework.TestCase;
 public class FourSumTest extends TestCase {
     /**
      * The first test for FourSum.
-     *
      */
     public void testGenerateParenthesesTest1() {
         int[] n = {1, 0, -1, 0, -2, 2};

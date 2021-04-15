@@ -5,7 +5,6 @@ import junit.framework.TestCase;
 public class LengthOfLongestSubstringTest extends TestCase {
     /**
      * The first test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring1() {
         String testString = "abcabcbb";
@@ -17,7 +16,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The second test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring2() {
         String testString = "bbbbb";
@@ -29,7 +27,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The third test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring3() {
         String testString = "pwwkew";
@@ -41,7 +38,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The fourth test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring4() {
         String testString = "aab";
@@ -53,7 +49,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The fifth test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring5() {
         String testString = "dvdf";
@@ -65,7 +60,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The sixth test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring6() {
         String testString = " ";
@@ -77,7 +71,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The seventh test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring7() {
         String testString = "";
@@ -89,7 +82,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The eighth test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring8() {
         String testString = "aa";
@@ -101,7 +93,6 @@ public class LengthOfLongestSubstringTest extends TestCase {
 
     /**
      * The ninth test for LengthOfLongestSubstring.
-     *
      */
     public void testlengthOfLongestSubstring9() {
         String testString = "au";

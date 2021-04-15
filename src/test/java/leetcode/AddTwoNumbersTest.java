@@ -11,8 +11,7 @@ import junit.framework.TestCase;
 public class AddTwoNumbersTest extends TestCase {
 
     /**
-     * The first test for AddTwoNumbersTest.
-     *
+     * The first test for AddTwoNumbers.
      */
     public void testaddTwoNumbers1() {
         ListNode l1n1 = new ListNode(2);
@@ -43,8 +42,7 @@ public class AddTwoNumbersTest extends TestCase {
     }
 
     /**
-     * The second test for AddTwoNumbersTest.
-     *
+     * The second test for AddTwoNumbers.
      */
     public void testaddTwoNumbers2() {
         ListNode l1n1 = new ListNode(5);

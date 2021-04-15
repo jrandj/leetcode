@@ -11,7 +11,6 @@ import junit.framework.TestCase;
 public class LetterCombinationsofaPhoneNumberTest extends TestCase {
     /**
      * The first test for LetterCombinationsofaPhoneNumber.
-     *
      */
     public void testLetterCombinationsofaPhoneNumber1() {
         String digits = "23";
@@ -26,7 +25,6 @@ public class LetterCombinationsofaPhoneNumberTest extends TestCase {
 
     /**
      * The second test for LetterCombinationsofaPhoneNumber.
-     *
      */
     public void testLetterCombinationsofaPhoneNumber2() {
         String digits = "2";
@@ -40,7 +38,6 @@ public class LetterCombinationsofaPhoneNumberTest extends TestCase {
 
     /**
      * The third test for LetterCombinationsofaPhoneNumber.
-     *
      */
     public void testLetterCombinationsofaPhoneNumber3() {
         String digits = "234";

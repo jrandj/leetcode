@@ -2,58 +2,65 @@ package leetcode;
 
 /**
  * Write a function to find the longest common prefix string amongst an array of
- * strings.
- * 
- * If there is no common prefix, return an empty string "".
- * 
+ * strings. If there is no common prefix, return an empty string "".
  */
-class LongestCommonPrefix {
-	/**
-	 * Return longest common prefix from an array of Strings
-	 *
-	 * @param strs the array of Strings
-	 * @return the longest common prefix from the array of Strings
-	 */
+final class LongestCommonPrefix {
 
-	public static String longestCommonPrefix(String[] strs) {
+    private LongestCommonPrefix() {
+        // prevent instantiation
+    }
 
-		if (strs == null || strs.length == 0) {
-			return "";
-		}
+    /**
+     * Return longest common prefix from an array of Strings.
+     *
+     * @param strs the array of Strings
+     * @return the longest common prefix from the array of Strings
+     */
+    public static String longestCommonPrefix(final String[] strs) {
 
-		// find shortest string (longest substring will be the shortest string)
-		int shortestString = 0;
-		int shortestStringIndex = 0;
-		for (int i = 0; i < strs.length; i++) {
-			if (strs[i].length() < shortestString) {
-				shortestString = strs[i].length();
-				shortestStringIndex = i;
-			}
-		}
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
 
-		int shortestStringCharacterIndex = 0; // start from the beginning of the shortest string
-		String longestCommon = "";
-		char currentChar;
+        // find shortest string (longest substring will be the shortest string)
+        int shortestString = 0;
+        int shortestStringIndex = 0;
+        for (int i = 0; i < strs.length; i++) {
+            if (strs[i].length() < shortestString) {
+                shortestString = strs[i].length();
+                shortestStringIndex = i;
+            }
+        }
 
-		for (int i = 0; i < strs[shortestStringIndex].length(); i++) { // for each character in the shortest string
-			currentChar = strs[shortestStringIndex].charAt(shortestStringCharacterIndex);
-			for (int j = 0; j < strs.length; j++) { // is this character in every other string?
-				if (strs[j].equals("")) {
-					return "";
-				}
+        // start from the beginning of the shortest string
+        int shortestStringCharacterIndex = 0;
+        StringBuilder longestCommon = new StringBuilder();
+        char currentChar;
 
-				if (shortestStringCharacterIndex > strs[j].length() - 1) {
-					return longestCommon;
-				}
+        // for each character in the shortest string
+        for (int i = 0; i < strs[shortestStringIndex].length(); i++) {
+            currentChar = strs[shortestStringIndex]
+                    .charAt(shortestStringCharacterIndex);
+            for (int j = 0; j < strs.length; j++) {
+                // is this character in every other string?
+                if (strs[j].equals("")) {
+                    return "";
+                }
 
-				if (strs[j].charAt(shortestStringCharacterIndex) != currentChar) {
-					// If all the other strings don't this character, we have found the longest
-					return longestCommon.toString();
-				}
-			}
-			shortestStringCharacterIndex++;
-			longestCommon += currentChar;
-		}
-		return longestCommon.toString();
-	}
+                if (shortestStringCharacterIndex > strs[j].length() - 1) {
+                    return longestCommon.toString();
+                }
+
+                if (strs[j]
+                        .charAt(shortestStringCharacterIndex) != currentChar) {
+                    // If all the other strings don't this character, we have
+                    // found the longest
+                    return longestCommon.toString();
+                }
+            }
+            shortestStringCharacterIndex++;
+            longestCommon.append(currentChar);
+        }
+        return longestCommon.toString();
+    }
 }

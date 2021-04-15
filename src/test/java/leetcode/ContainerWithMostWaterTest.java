@@ -5,7 +5,6 @@ import junit.framework.TestCase;
 public class ContainerWithMostWaterTest extends TestCase {
     /**
      * The first test for ContainerWithMostWater.
-     *
      */
     public void testaddTwoNumbers1() {
         int[] inputArray = {1, 8, 6, 2, 5, 4, 8, 3, 7};

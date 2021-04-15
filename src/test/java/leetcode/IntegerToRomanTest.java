@@ -5,7 +5,6 @@ import junit.framework.TestCase;
 public class IntegerToRomanTest extends TestCase {
     /**
      * The first test for IntegerToRoman.
-     *
      */
     public void testintToRoman1() {
         String testResult = leetcode.IntegerToRoman.intToRoman(3);
@@ -15,7 +14,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The second test for IntegerToRoman.
-     *
      */
     public void testintToRoman2() {
         String testResult = leetcode.IntegerToRoman.intToRoman(4);
@@ -25,7 +23,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The third test for IntegerToRoman.
-     *
      */
     public void testintToRoman3() {
         String testResult = leetcode.IntegerToRoman.intToRoman(9);
@@ -35,7 +32,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The fourth test for IntegerToRoman.
-     *
      */
     public void testintToRoman4() {
         String testResult = leetcode.IntegerToRoman.intToRoman(58);
@@ -45,7 +41,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The fifth test for IntegerToRoman.
-     *
      */
     public void testintToRoman5() {
         String testResult = leetcode.IntegerToRoman.intToRoman(1994);
@@ -55,7 +50,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The sixth test for IntegerToRoman.
-     *
      */
     public void testintToRoman6() {
         String testResult = leetcode.IntegerToRoman.intToRoman(40);
@@ -65,7 +59,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The seventh test for IntegerToRoman.
-     *
      */
     public void testintToRoman7() {
         String testResult = leetcode.IntegerToRoman.intToRoman(400);
@@ -75,7 +68,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The eighth test for IntegerToRoman.
-     *
      */
     public void testintToRoman8() {
         String testResult = leetcode.IntegerToRoman.intToRoman(450);
@@ -85,7 +77,6 @@ public class IntegerToRomanTest extends TestCase {
 
     /**
      * The ninth test for IntegerToRoman.
-     *
      */
     public void testintToRoman9() {
         String testResult = leetcode.IntegerToRoman.intToRoman(490);

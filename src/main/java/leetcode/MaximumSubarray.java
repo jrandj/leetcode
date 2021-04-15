@@ -63,7 +63,8 @@ public class MaximumSubarray {
      * @param r    the ending index of the sub-array
      * @return result the largest sum of any contiguous sub-array
      */
-    public int maxCrossingSum(final int[] nums, final int l, final int m, final int r) {
+    public int maxCrossingSum(final int[] nums, final int l, final int m,
+            final int r) {
         // elements on left of mid
         int leftCurrentSum = 0;
         int leftMaxSum = Integer.MIN_VALUE;
@@ -84,7 +85,8 @@ public class MaximumSubarray {
             }
         }
 
-        return Math.max(leftMaxSum, Math.max(rightMaxSum, leftMaxSum + rightMaxSum));
+        return Math.max(leftMaxSum,
+                Math.max(rightMaxSum, leftMaxSum + rightMaxSum));
     }
 
     /**
@@ -104,7 +106,8 @@ public class MaximumSubarray {
         int m = (l + r) / 2;
 
         return Math.max(maxSubArrayHelper(nums, l, m),
-                Math.max(maxSubArrayHelper(nums, m + 1, r), maxCrossingSum(nums, l, m, r)));
+                Math.max(maxSubArrayHelper(nums, m + 1, r),
+                        maxCrossingSum(nums, l, m, r)));
     }
 
     /**

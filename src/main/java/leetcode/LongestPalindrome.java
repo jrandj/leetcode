@@ -1,85 +1,111 @@
 package leetcode;
 
 /**
- * Given a string s, find the longest palindromic substring in s. You may assume that the maximum
- * length of s is 1000.
+ * Given a string s, find the longest palindromic substring in s. You may assume
+ * that the maximum length of s is 1000.
  */
-public class LongestPalindrome {
-  /**
-   * The brute force solution. Find every substring and find the longest where it equals its
-   * reverse.
-   */
-  public static String reverseString(String s) {
-    String reverseString = new String();
-    for (int i = 0; i < s.length(); i++) {
-      reverseString = reverseString + (s.charAt(s.length() - i - 1));
-    }
-    return reverseString;
-  }
+public final class LongestPalindrome {
 
-  /**
-   * The brute force solution.
-   */
-  public static String longestPalindromeSolution1(String s) {
-    String longestPalindrome = "";
-    String longestCandidate = new String();
-
-    if (s.equals("") || s == null) {
-      return "";
+    private LongestPalindrome() {
+        // prevent instantiation
     }
 
-    for (int i = 0; i < s.length(); i++) {
-      longestCandidate = "";
-      for (int j = i; j < s.length(); j++) {
-        longestCandidate = longestCandidate + s.charAt(j);
-        String reverseStringCandidate = reverseString(longestCandidate);
-        if (longestCandidate.equals(reverseStringCandidate)
-            && (longestCandidate.length() > longestPalindrome.length())) {
-          longestPalindrome = longestCandidate;
+    /**
+     * The brute force solution. Find every substring and find the longest where
+     * it equals its reverse.
+     *
+     * @param s the input String
+     * @return the reversed string
+     */
+    public static String reverseString(final String s) {
+        StringBuilder reverseString = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            reverseString = reverseString
+                    .append((s.charAt(s.length() - i - 1)));
         }
-      }
+        return reverseString.toString();
     }
-    return longestPalindrome;
-  }
 
-  /**
-   * Expand around centre.
-   */
-  public static String expand(String s, int startIndex, int endIndex) {
-    while (startIndex >= 0 && endIndex < s.length()) {
-      if (s.charAt(startIndex) == s.charAt(endIndex)) {
-        startIndex--;
-        endIndex++;
-      } else {
-        break;
-      }
+    /**
+     * The brute force solution.
+     *
+     * @param s the input String
+     * @return the reversed string
+     */
+    public static String longestPalindromeSolution1(final String s) {
+        StringBuilder longestPalindrome = new StringBuilder();
+        StringBuilder longestCandidate = new StringBuilder();
+
+        if (s == null || s.equals("")) {
+            return "";
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = i; j < s.length(); j++) {
+                longestCandidate.append(s.charAt(j));
+                String reverseStringCandidate = reverseString(
+                        longestCandidate.toString());
+                if (longestCandidate.toString().equals(reverseStringCandidate)
+                        && (longestCandidate.length() > longestPalindrome
+                                .length())) {
+                    longestPalindrome = longestCandidate;
+                }
+            }
+        }
+        return longestPalindrome.toString();
     }
-    // 1 has been subtracted from startIndex and endIndex, so we need to add 1 back when we return
-    // (noting that the substring method goes from start to end - 1)
-    return s.substring(startIndex + 1, endIndex);
-  }
 
-  /**
-   * Expand around the centre for both i:i and i:i+1.
-   */
-  public static String longestPalindromeSolution2(String s) {
-    int stringLength = s.length();
-    String longestPalindrome = "";
-    String longestCandidate1 = "";
-    String longestCandidate2 = "";
-
-    for (int i = 0; i < stringLength; i++) {
-      // E.g. "ACA" gets picked up in the first statement and "ACCA" gets picked up in the second
-      // every palindrome is one of these patterns
-      longestCandidate1 = expand(s, i, i);
-      if (longestCandidate1.length() > longestPalindrome.length()) {
-        longestPalindrome = longestCandidate1;
-      }
-      longestCandidate2 = expand(s, i, i + 1);
-      if (longestCandidate2.length() > longestPalindrome.length()) {
-        longestPalindrome = longestCandidate2;
-      }
+    /**
+     * Expand around centre.
+     *
+     * @param s           the input String
+     * @param pstartIndex the starting index for expansion
+     * @param pendIndex   the ending index for expansion
+     * @return the expanded substring
+     */
+    public static String expand(final String s, final int pstartIndex,
+            final int pendIndex) {
+        int startIndex = pstartIndex;
+        int endIndex = pendIndex;
+        while (startIndex >= 0 && endIndex < s.length()) {
+            if (s.charAt(startIndex) == s.charAt(endIndex)) {
+                startIndex--;
+                endIndex++;
+            } else {
+                break;
+            }
+        }
+        // 1 has been subtracted from startIndex and endIndex, so we need to add
+        // 1 back when we return
+        // (noting that the substring method goes from start to end - 1)
+        return s.substring(startIndex + 1, endIndex);
     }
-    return longestPalindrome;
-  }
+
+    /**
+     * Expand around the centre for both i:i and i:i+1.
+     *
+     * @param s the input String
+     * @return the longest palindrome
+     */
+    public static String longestPalindromeSolution2(final String s) {
+        int stringLength = s.length();
+        String longestPalindrome = "";
+        String longestCandidate1 = "";
+        String longestCandidate2 = "";
+
+        for (int i = 0; i < stringLength; i++) {
+            // E.g. "ACA" gets picked up in the first statement and "ACCA" gets
+            // picked up in the second
+            // every palindrome is one of these patterns
+            longestCandidate1 = expand(s, i, i);
+            if (longestCandidate1.length() > longestPalindrome.length()) {
+                longestPalindrome = longestCandidate1;
+            }
+            longestCandidate2 = expand(s, i, i + 1);
+            if (longestCandidate2.length() > longestPalindrome.length()) {
+                longestPalindrome = longestCandidate2;
+            }
+        }
+        return longestPalindrome;
+    }
 }

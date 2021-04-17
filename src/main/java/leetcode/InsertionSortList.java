@@ -1,7 +1,5 @@
 package leetcode;
 
-import leetcode.AddTwoNumbers.ListNode;
-
 /**
  * Algorithm of Insertion Sort:
  *
@@ -29,22 +27,23 @@ class InsertionSortList {
 
         // iterate over the input list
         while (cur != null) {
-            next = cur.next;
+            next = cur.getNext();
             p = dummy;
             // iterate over the (growing) output list
-            while (p.next != null && p.next.val <= cur.val) {
-                p = p.next;
+            while (p.getNext() != null
+                    && p.getNext().getVal() <= cur.getVal()) {
+                p = p.getNext();
             }
             // p.next.val is now > cur.val so insert it after cur
-            cur.next = p.next;
+            cur.setNext(p.getNext());
 
             // cur is now the head
-            p.next = cur;
+            p.setNext(cur);
 
             // iterate over the input list
             cur = next;
         }
 
-        return dummy.next;
+        return dummy.getNext();
     }
 }

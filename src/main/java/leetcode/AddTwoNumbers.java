@@ -16,26 +16,14 @@ public final class AddTwoNumbers {
     /**
      * This method checks if the array is empty.
      *
+     * @param pl1 the first array
+     * @param pl2 the second array
+     * @return the head node of a list containing sum
      */
-    static class ListNode {
-        /** The HashMap containing the adjacent nodes. */
-        int val;
-        /** The HashMap containing the adjacent nodes. */
-        ListNode next;
-
-        ListNode(final int x) {
-            val = x;
-        }
-    }
-
-    /**
-     * This method checks if the array is empty.
-     *
-     * @param l1 if the array is empty and false otherwise
-     * @param l2 if the array is empty and false otherwise
-     * @return t
-     */
-    public static ListNode addTwoNumbersSolution(ListNode l1, ListNode l2) {
+    public static ListNode addTwoNumbersSolution(final ListNode pl1,
+            final ListNode pl2) {
+        ListNode l1 = pl1;
+        ListNode l2 = pl2;
         ListNode dummyHead = new ListNode(0);
         ListNode l3 = dummyHead;
         int l1Val;
@@ -47,13 +35,13 @@ public final class AddTwoNumbers {
         while (l1 != null || l2 != null) {
 
             if (l1 != null) {
-                l1Val = l1.val;
+                l1Val = l1.getVal();
             } else {
                 l1Val = 0;
             }
 
             if (l2 != null) {
-                l2Val = l2.val;
+                l2Val = l2.getVal();
             } else {
                 l2Val = 0;
             }
@@ -62,23 +50,22 @@ public final class AddTwoNumbers {
             carry = sum / 10;
             digit = sum % 10;
             ListNode newNode = new ListNode(digit);
-            l3.next = newNode;
+            l3.setNext(newNode);
 
             if (l1 != null) {
-                l1 = l1.next;
+                l1 = l1.getNext();
             }
             if (l2 != null) {
-                l2 = l2.next;
+                l2 = l2.getNext();
             }
-            l3 = l3.next;
+            l3 = l3.getNext();
         }
 
         if (carry > 0) {
             ListNode newNode = new ListNode(carry);
-            l3.next = newNode;
-            l3 = l3.next;
+            l3.setNext(newNode);
+            l3 = l3.getNext();
         }
-        return dummyHead.next;
+        return dummyHead.getNext();
     }
-
 }

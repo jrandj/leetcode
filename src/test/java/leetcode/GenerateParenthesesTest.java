@@ -2,9 +2,8 @@ package leetcode;
 
 import java.util.Arrays;
 import java.util.List;
-
-import junit.framework.Assert;
 import junit.framework.TestCase;
+import org.junit.Assert;
 
 public class GenerateParenthesesTest extends TestCase {
     /**

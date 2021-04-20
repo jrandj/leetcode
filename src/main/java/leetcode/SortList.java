@@ -71,13 +71,13 @@ class SortList {
         // l2 == null was reached first so l1 value remains
         if (l1 != null) {
             currentNode.setNext(l1);
-            l1 = l1.getNext();
+            l1.getNext();
         }
 
         // l1 == null was reached first so l2 value remains
         if (l2 != null) {
             currentNode.setNext(l2);
-            l2 = l2.getNext();
+            l2.getNext();
         }
 
         return temp.getNext();

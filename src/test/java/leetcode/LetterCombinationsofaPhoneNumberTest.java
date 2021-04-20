@@ -2,10 +2,8 @@ package leetcode;
 
 import java.util.Arrays;
 import java.util.List;
-
 import org.apache.commons.collections.CollectionUtils;
-
-import junit.framework.Assert;
+import org.junit.Assert;
 import junit.framework.TestCase;
 
 public class LetterCombinationsofaPhoneNumberTest extends TestCase {

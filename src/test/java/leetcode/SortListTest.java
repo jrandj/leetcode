@@ -1,6 +1,6 @@
 package leetcode;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import junit.framework.TestCase;
 
 public class SortListTest extends TestCase {

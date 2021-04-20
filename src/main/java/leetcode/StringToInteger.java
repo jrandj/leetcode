@@ -60,7 +60,7 @@ final class StringToInteger {
      * @return the integer
      */
     public static int myAtoi(final String str) {
-        String intString = "";
+        StringBuilder intString = new StringBuilder();
         boolean start = false;
         boolean firstNonZero = false;
         boolean firstNegative = false;
@@ -93,7 +93,8 @@ final class StringToInteger {
             // occurred
             if (!currentCharString.matches("[0-9+-]") && start
                     || currentCharString.matches("[+-]") && preceedingZero) {
-                return resultStringToInteger(firstNegative, intString);
+                return resultStringToInteger(firstNegative,
+                        intString.toString());
                 // Only count negative if it is the first occurrence
             } else if (currentCharString.matches("[0-9-]")
                     && symbolCount <= 1) {
@@ -103,10 +104,10 @@ final class StringToInteger {
                     // Build the number string unless it is just leading zeros
                 } else if (currentCharString.matches("[1-9]")
                         || currentCharString.equals("0") && firstNonZero) {
-                    intString += currentCharString;
+                    intString.append(currentCharString);
                 }
             }
         }
-        return resultStringToInteger(firstNegative, intString);
+        return resultStringToInteger(firstNegative, intString.toString());
     }
 }

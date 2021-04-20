@@ -64,7 +64,7 @@ public final class AddTwoNumbers {
         if (carry > 0) {
             ListNode newNode = new ListNode(carry);
             l3.setNext(newNode);
-            l3 = l3.getNext();
+            l3.getNext();
         }
         return dummyHead.getNext();
     }

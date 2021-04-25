@@ -8,7 +8,7 @@ package leetcode;
  * Here, we will use the integers 0, 1, and 2 to represent the color red, white,
  * and blue respectively.
  *
- * Note: You are not suppose to use the library's sort function for this
+ * Note: You are not supposed to use the library's sort function for this
  * problem.
  *
  * Example:
@@ -21,13 +21,40 @@ package leetcode;
  * you come up with a one-pass algorithm using only constant space?
  */
 class SortColors {
+
     /**
      * Sort colors in an array.
      *
      * @param nums an array of nums representing colors
      */
-
     public void sortColors(final int[] nums) {
+        int zerosCount = 0;
+        int onesCount = 0;
+        int twosCount = 0;
 
+        // count the occurrences of each color
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                zerosCount++;
+            } else if (nums[i] == 1) {
+                onesCount++;
+            } else if (nums[i] == 2) {
+                twosCount++;
+            }
+        }
+
+        // overwrite the values in the array
+        for (int i = 0; i < nums.length; i++) {
+            if (zerosCount > 0) {
+                nums[i] = 0;
+                zerosCount--;
+            } else if (onesCount > 0) {
+                nums[i] = 1;
+                onesCount--;
+            } else if (twosCount > 0) {
+                nums[i] = 2;
+                twosCount--;
+            }
+        }
     }
 }

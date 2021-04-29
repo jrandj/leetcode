@@ -71,7 +71,6 @@ public final class SearchInRotatedSortedArray {
         int right = nums.length - 1;
         while (left < right) {
             int mid = (left + right) / 2;
-            // 7 > 2 ? know left is not 7 as right is smaller
             if (nums[mid] > nums[right]) {
                 // you know mid is not the smallest element as nums[right] is
                 // smaller, so set mid + 1

@@ -68,6 +68,12 @@ final class CombinationSum2 {
         }
 
         for (int i = start; i < candidates.length; i++) {
+
+            // take advantage of sorting to leave early
+            if (candidates[i] > target) {
+                break;
+            }
+
             // rely on sorting to avoid duplicates
             if (i == start || candidates[i] != candidates[i - 1]) {
                 // simulate taking the number

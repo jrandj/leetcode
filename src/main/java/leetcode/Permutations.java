@@ -13,6 +13,11 @@ final class Permutations {
     /**
      * Brute force approach to find all permutations of the input array.
      *
+     * The time complexity is O(N*N!) as we loop over each element N, and
+     * backtracking is then N!.
+     *
+     * The space complexity is O(N*N!).
+     *
      * @param nums The input array.
      * @return All permutations.
      */
@@ -29,7 +34,7 @@ final class Permutations {
         List<Integer> remainingElements = new ArrayList<Integer>(
                 Arrays.asList(boxedNums));
 
-        recursiveHelper(remainingElements, permutations, permutation);
+        recursiveHelper(permutations, remainingElements, permutation);
         return permutations;
     }
 
@@ -40,21 +45,29 @@ final class Permutations {
      * @param permutations      All permutations.
      * @param permutation       The current permutation.
      */
-    private void recursiveHelper(List<Integer> remainingElements,
-            List<List<Integer>> permutations, List<Integer> permutation) {
+    private void recursiveHelper(final List<List<Integer>> permutations,
+            final List<Integer> remainingElements,
+            final List<Integer> permutation) {
 
+        // stop if we have used all of the remaining objects
         if (remainingElements.isEmpty()) {
             permutations.add(new ArrayList<>(permutation));
             return;
         }
 
         for (int i = 0; i < remainingElements.size(); i++) {
-            permutation.add(remainingElements.get(i));
-            System.out.println("Permutation is: " + permutation.toString());
+            int remainingElement = remainingElements.get(i);
             remainingElements.remove(i);
-            System.out.println(
-                    "Remaining elements are: " + remainingElements.toString());
-            recursiveHelper(remainingElements, permutations, permutation);
+            permutation.add(remainingElement);
+//            System.out.println("Permutation is: " + permutation.toString());
+//            System.out.println(
+//                    "Remaining elements are: " + remainingElements.toString());
+            recursiveHelper(permutations, remainingElements, permutation);
+            permutation.remove(Integer.valueOf(remainingElement));
+            remainingElements.add(i, remainingElement);
+//            System.out.println("Permutation is: " + permutation.toString());
+//            System.out.println(
+//                    "Remaining elements are: " + remainingElements.toString());
         }
     }
 

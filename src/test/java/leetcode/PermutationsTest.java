@@ -21,7 +21,9 @@ public class PermutationsTest extends TestCase {
         testResult.add(Arrays.asList(new Integer[] {3, 2, 1}));
         Permutations permutations = new Permutations();
         List<List<Integer>> output = permutations.permute(nums);
-        assertEquals(output, testResult);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
     }
 
     /**
@@ -34,7 +36,9 @@ public class PermutationsTest extends TestCase {
         testResult.add(Arrays.asList(new Integer[] {1, 0}));
         Permutations permutations = new Permutations();
         List<List<Integer>> output = permutations.permute(nums);
-        assertEquals(output, testResult);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
     }
 
     /**
@@ -46,6 +50,56 @@ public class PermutationsTest extends TestCase {
         testResult.add(Arrays.asList(new Integer[] {1}));
         Permutations permutations = new Permutations();
         List<List<Integer>> output = permutations.permute(nums);
-        assertEquals(output, testResult);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
+    }
+
+    /**
+     * The fourth test for Permutations.
+     */
+    public void testPermutations4() {
+        int[] nums = {1, 2, 3};
+        List<List<Integer>> testResult = new ArrayList<>();
+        testResult.add(Arrays.asList(new Integer[] {1, 2, 3}));
+        testResult.add(Arrays.asList(new Integer[] {1, 3, 2}));
+        testResult.add(Arrays.asList(new Integer[] {2, 1, 3}));
+        testResult.add(Arrays.asList(new Integer[] {2, 3, 1}));
+        testResult.add(Arrays.asList(new Integer[] {3, 1, 2}));
+        testResult.add(Arrays.asList(new Integer[] {3, 2, 1}));
+        Permutations permutations = new Permutations();
+        List<List<Integer>> output = permutations.permuteHeapsAlgorithm(nums);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
+    }
+
+    /**
+     * The fifth test for Permutations.
+     */
+    public void testPermutations5() {
+        int[] nums = {0, 1};
+        List<List<Integer>> testResult = new ArrayList<>();
+        testResult.add(Arrays.asList(new Integer[] {0, 1}));
+        testResult.add(Arrays.asList(new Integer[] {1, 0}));
+        Permutations permutations = new Permutations();
+        List<List<Integer>> output = permutations.permuteHeapsAlgorithm(nums);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
+    }
+
+    /**
+     * The sixth test for Permutations.
+     */
+    public void testPermutations6() {
+        int[] nums = {1};
+        List<List<Integer>> testResult = new ArrayList<>();
+        testResult.add(Arrays.asList(new Integer[] {1}));
+        Permutations permutations = new Permutations();
+        List<List<Integer>> output = permutations.permuteHeapsAlgorithm(nums);
+        assertTrue(output.size() == testResult.size()
+                && output.containsAll(testResult)
+                && testResult.containsAll(output));
     }
 }

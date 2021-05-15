@@ -11,6 +11,73 @@ import java.util.List;
 final class Permutations {
 
     /**
+     * Heap's algorithm to find all permutations of the input array.
+     *
+     * The time complexity is O(N*N!) as we loop over each element N, and
+     * backtracking is then N!.
+     *
+     * The space complexity is O(N*N!).
+     *
+     * @param nums The input array.
+     * @return All permutations.
+     */
+    public List<List<Integer>> permuteHeapsAlgorithm(final int[] nums) {
+
+        List<List<Integer>> permutations = new ArrayList<>();
+        List<Integer> permutation = new ArrayList<>();
+
+        // naive way to get a List<Integer> from int[]
+        Integer[] boxedNums = new Integer[nums.length];
+        for (int i = 0; i < nums.length; i++) {
+            boxedNums[i] = nums[i];
+        }
+        List<Integer> remainingElements = new ArrayList<Integer>(
+                Arrays.asList(boxedNums));
+
+        heapsAlgorithm(permutations, remainingElements,
+                remainingElements.size());
+        return permutations;
+    }
+
+    /**
+     * Helper method for Heap's algorithm.
+     *
+     * @param remainingElements The remaining elements to permute.
+     * @param permutations      All permutations.
+     * @param length            Length of the current array.
+     */
+    private void heapsAlgorithm(final List<List<Integer>> permutations,
+            final List<Integer> remainingElements, int length) {
+
+        if (length == 1) {
+            permutations.add(new ArrayList<>(remainingElements));
+        } else {
+            for (int i = 0; i < length; i++) {
+                heapsAlgorithm(permutations, remainingElements, length - 1);
+                if (length % 2 == 0) {
+                    swapElements(remainingElements, i, length - 1);
+                } else {
+                    swapElements(remainingElements, 0, length - 1);
+                }
+            }
+        }
+    }
+
+    /**
+     * Helper method to swap elements in an input list.
+     *
+     * @param list The input list
+     * @param a    The first index.
+     * @param b    The second index.
+     */
+    private void swapElements(final List<Integer> list, final int a,
+            final int b) {
+        int temp = list.get(a);
+        list.set(a, list.get(b));
+        list.set(b, temp);
+    }
+
+    /**
      * Brute force approach to find all permutations of the input array.
      *
      * The time complexity is O(N*N!) as we loop over each element N, and

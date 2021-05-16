@@ -60,4 +60,26 @@ public class NextPermutationTest extends TestCase {
         Assert.assertArrayEquals(nums, testResult);
     }
 
+    /**
+     * The sixth test for NextPermutation.
+     */
+    public void testNextPermutation6() {
+        NextPermutation nextPermutation = new NextPermutation();
+        int[] nums = {2, 3, 1};
+        int[] testResult = {3, 1, 2};
+        nextPermutation.nextPermutation(nums);
+        Assert.assertArrayEquals(nums, testResult);
+    }
+
+    /**
+     * The seventh test for NextPermutation.
+     */
+    public void testNextPermutation7() {
+        NextPermutation nextPermutation = new NextPermutation();
+        int[] nums = {5, 4, 7, 5, 3, 2};
+        int[] testResult = {5, 5, 2, 3, 4, 7};
+        nextPermutation.nextPermutation(nums);
+        Assert.assertArrayEquals(nums, testResult);
+    }
+
 }

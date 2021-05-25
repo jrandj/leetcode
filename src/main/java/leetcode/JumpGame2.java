@@ -54,4 +54,36 @@ public class JumpGame2 {
         }
         return dp[nums.length - 1];
     }
+
+    /**
+     * Return the smallest number of jumps to traverse the array.
+     *
+     * The time complexity is O(N) as we iterate over the loop once.
+     *
+     * The space complexity is constant.
+     *
+     * @param nums The input array.
+     * @return The number of jumps to traverse the array.
+     */
+    public int jumpGreedy(final int[] nums) {
+
+        if (nums.length < 1 || nums.length > 1000) {
+            return 0;
+        }
+
+        var r = 0;
+        var furthest = 0;
+        var result = 0;
+
+        while (r < nums.length - 1) {
+            for (int i = 0; i < r + 1; i++) {
+                furthest = Math.max(furthest, i + nums[i]);
+
+            }
+            r = furthest;
+            result++;
+        }
+
+        return result;
+    }
 }

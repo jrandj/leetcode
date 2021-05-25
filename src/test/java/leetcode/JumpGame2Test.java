@@ -26,4 +26,26 @@ public class JumpGame2Test extends TestCase {
         assertEquals(testResult, actualResult);
     }
 
+    /**
+     * The third test for JumpGame2.
+     */
+    public void testJumpGame2c() {
+        int[] nums = {2, 3, 1, 1, 4};
+        int testResult = 2;
+        JumpGame2 jumpGame2 = new JumpGame2();
+        int actualResult = jumpGame2.jumpGreedy(nums);
+        assertEquals(testResult, actualResult);
+    }
+
+    /**
+     * The fourth test for JumpGame2.
+     */
+    public void testJumpGame2d() {
+        int[] nums = {2, 3, 0, 1, 4};
+        int testResult = 2;
+        JumpGame2 jumpGame2 = new JumpGame2();
+        int actualResult = jumpGame2.jumpGreedy(nums);
+        assertEquals(testResult, actualResult);
+    }
+
 }

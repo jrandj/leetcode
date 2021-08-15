@@ -27,7 +27,7 @@ public class BinaryTreeInOrderTraversalTest extends TestCase {
         BinaryTreeInorderTraversal binaryTreeInorderTraversal =
                 new BinaryTreeInorderTraversal();
         List<Integer> result = binaryTreeInorderTraversal
-                .inorderTraversal(n1);
+                .inorderTraversalRecursive(n1);
         Assert.assertEquals(testResult, result);
     }
 
@@ -39,7 +39,7 @@ public class BinaryTreeInOrderTraversalTest extends TestCase {
         BinaryTreeInorderTraversal binaryTreeInorderTraversal =
                 new BinaryTreeInorderTraversal();
         List<Integer> result = binaryTreeInorderTraversal
-                .inorderTraversal(null);
+                .inorderTraversalRecursive(null);
         Assert.assertEquals(testResult, result);
     }
 
@@ -55,7 +55,7 @@ public class BinaryTreeInOrderTraversalTest extends TestCase {
         BinaryTreeInorderTraversal binaryTreeInorderTraversal =
                 new BinaryTreeInorderTraversal();
         List<Integer> result = binaryTreeInorderTraversal
-                .inorderTraversal(n1);
+                .inorderTraversalRecursive(n1);
         Assert.assertEquals(testResult, result);
     }
 
@@ -74,7 +74,7 @@ public class BinaryTreeInOrderTraversalTest extends TestCase {
         BinaryTreeInorderTraversal binaryTreeInorderTraversal =
                 new BinaryTreeInorderTraversal();
         List<Integer> result = binaryTreeInorderTraversal
-                .inorderTraversal(n1);
+                .inorderTraversalRecursive(n1);
         Assert.assertEquals(testResult, result);
     }
 
@@ -93,7 +93,95 @@ public class BinaryTreeInOrderTraversalTest extends TestCase {
         BinaryTreeInorderTraversal binaryTreeInorderTraversal =
                 new BinaryTreeInorderTraversal();
         List<Integer> result = binaryTreeInorderTraversal
-                .inorderTraversal(n1);
+                .inorderTraversalRecursive(n1);
+        Assert.assertEquals(testResult, result);
+    }
+
+    /**
+     * The sixth test for BinaryTreeInorderTraversal.
+     */
+    public void testBinaryTreeInOrderTraversalTest6() {
+        TreeNode n1 = new TreeNode(1);
+        TreeNode n2 = new TreeNode(2);
+        TreeNode n3 = new TreeNode(3);
+        n1.setLeft(null);
+        n1.setRight(n2);
+        n2.setLeft(n3);
+        n2.setRight(null);
+        n3.setLeft(null);
+        n3.setRight(null);
+
+        List<Integer> testResult = Arrays.asList(1, 3, 2);
+        BinaryTreeInorderTraversal binaryTreeInorderTraversal =
+                new BinaryTreeInorderTraversal();
+        List<Integer> result = binaryTreeInorderTraversal
+                .inorderTraversalIterative(n1);
+        Assert.assertEquals(testResult, result);
+    }
+
+    /**
+     * The seventh test for BinaryTreeInorderTraversal.
+     */
+    public void testBinaryTreeInOrderTraversalTest7() {
+        List<Integer> testResult = Arrays.asList();
+        BinaryTreeInorderTraversal binaryTreeInorderTraversal =
+                new BinaryTreeInorderTraversal();
+        List<Integer> result = binaryTreeInorderTraversal
+                .inorderTraversalIterative(null);
+        Assert.assertEquals(testResult, result);
+    }
+
+    /**
+     * The eighth test for BinaryTreeInorderTraversal.
+     */
+    public void testBinaryTreeInOrderTraversalTest8() {
+        TreeNode n1 = new TreeNode(1);
+        n1.setLeft(null);
+        n1.setRight(null);
+
+        List<Integer> testResult = Arrays.asList(1);
+        BinaryTreeInorderTraversal binaryTreeInorderTraversal =
+                new BinaryTreeInorderTraversal();
+        List<Integer> result = binaryTreeInorderTraversal
+                .inorderTraversalIterative(n1);
+        Assert.assertEquals(testResult, result);
+    }
+
+    /**
+     * The ninth test for BinaryTreeInorderTraversal.
+     */
+    public void testBinaryTreeInOrderTraversalTest9() {
+        TreeNode n1 = new TreeNode(1);
+        TreeNode n2 = new TreeNode(2);
+        n1.setLeft(n2);
+        n1.setRight(null);
+        n2.setLeft(null);
+        n2.setRight(null);
+
+        List<Integer> testResult = Arrays.asList(2, 1);
+        BinaryTreeInorderTraversal binaryTreeInorderTraversal =
+                new BinaryTreeInorderTraversal();
+        List<Integer> result = binaryTreeInorderTraversal
+                .inorderTraversalIterative(n1);
+        Assert.assertEquals(testResult, result);
+    }
+
+    /**
+     * The tenth test for BinaryTreeInorderTraversal.
+     */
+    public void testBinaryTreeInOrderTraversalTest10() {
+        TreeNode n1 = new TreeNode(1);
+        TreeNode n2 = new TreeNode(2);
+        n1.setLeft(null);
+        n1.setRight(n2);
+        n2.setLeft(null);
+        n2.setRight(null);
+
+        List<Integer> testResult = Arrays.asList(1, 2);
+        BinaryTreeInorderTraversal binaryTreeInorderTraversal =
+                new BinaryTreeInorderTraversal();
+        List<Integer> result = binaryTreeInorderTraversal
+                .inorderTraversalIterative(n1);
         Assert.assertEquals(testResult, result);
     }
 

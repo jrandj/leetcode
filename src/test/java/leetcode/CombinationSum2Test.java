@@ -10,7 +10,7 @@ public class CombinationSum2Test extends TestCase {
     /**
      * The first test for CombinationSum2.
      */
-    public void testcombinationSum1() {
+    public void testcombinationSum2a() {
         int[] candidates = {10, 1, 2, 7, 6, 1, 5};
         int target = 8;
         List<List<Integer>> testResult = new ArrayList<>();
@@ -27,7 +27,7 @@ public class CombinationSum2Test extends TestCase {
     /**
      * The second test for CombinationSum2.
      */
-    public void testcombinationSum2() {
+    public void testcombinationSum2b() {
         int[] candidates = {2, 5, 2, 1, 2};
         int target = 5;
         List<List<Integer>> testResult = new ArrayList<>();

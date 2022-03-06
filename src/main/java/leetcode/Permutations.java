@@ -47,7 +47,7 @@ final class Permutations {
      * @param length            Length of the current array.
      */
     private void heapsAlgorithm(final List<List<Integer>> permutations,
-            final List<Integer> remainingElements, int length) {
+            final List<Integer> remainingElements, final int length) {
 
         if (length == 1) {
             permutations.add(new ArrayList<>(remainingElements));
@@ -126,15 +126,9 @@ final class Permutations {
             int remainingElement = remainingElements.get(i);
             remainingElements.remove(i);
             permutation.add(remainingElement);
-//            System.out.println("Permutation is: " + permutation.toString());
-//            System.out.println(
-//                    "Remaining elements are: " + remainingElements.toString());
             recursiveHelper(permutations, remainingElements, permutation);
             permutation.remove(Integer.valueOf(remainingElement));
             remainingElements.add(i, remainingElement);
-//            System.out.println("Permutation is: " + permutation.toString());
-//            System.out.println(
-//                    "Remaining elements are: " + remainingElements.toString());
         }
     }
 

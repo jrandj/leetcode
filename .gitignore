@@ -1,0 +1,7 @@
+.project
+java/target/
+java/.settings
+java/.checkstyle
+java/.classpath
+java/.project
+python/.idea

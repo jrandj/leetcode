@@ -11,7 +11,7 @@ class Solution:
         :param nums: The input list.
         :return List[List[int]: The output list of lists.
 
-        The time complexity is O(LOG(N) + N^2) as we use sort and iterate through nums twice. Faster than 71.07% of
+        The time complexity is O(N*LOG(N) + N^2) as we use sort and iterate through nums twice. Faster than 71.07% of
         solutions.
 
         The space complexity is O(N) as we sort. Less memory than 22.23% of solutions.

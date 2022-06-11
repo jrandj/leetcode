@@ -14,10 +14,11 @@ class Solution:
         :param target: The target number.
         :return List[List[int]: The list of combinations that sum to the target.
 
-        The time complexity is O(2^N + N*LOG(N)) as the depth of the tree is N and we use sort. Faster than 20.65% of
-        solutions.
+        The time complexity is O(K * 2^N) where K is the average length of each solution and N is the length of the
+        input list. Faster than 20.65% of solutions.
 
-        The space complexity is O(1) as we don't use any additional memory. Less memory than 57.10% of solutions.
+        The space complexity is O(N) for the recursion stack and to hold the list. This depends on the length of
+        the longest solution which is equal to target/min of candidates. Less memory than 57.10% of solutions.
 
         """
         self.res = []

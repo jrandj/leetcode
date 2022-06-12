@@ -17,7 +17,7 @@ class Solution:
         The time complexity is O(k * 9^k) as the recursion depth is k and there are 9 digits to choose from. Faster
         than 82.38% of solutions.
 
-        The space complexity is O(N) for the recursion stack and to hold the list. Less memory than 77.39% of
+        The space complexity is O(k) for the recursion stack and to hold the list. Less memory than 77.39% of
         solutions.
 
         """

@@ -23,36 +23,36 @@ class MinStack:
 
     def push(self, val: int) -> None:
         """
-         Pushes the element val onto the stack. The time and space complexity is O(1).
+        Pushes the element val onto the stack. The time and space complexity is O(1).
 
-         :param val: The val to be added to the stack.
-         :return: None
-         """
+        :param val: The val to be added to the stack.
+        :return: None
+        """
         self.stack.append(val)
         min_check = self.min_stack[-1] if self.min_stack else val
         self.min_stack.append(min(val, min_check))
 
     def pop(self) -> None:
         """
-         Removes the element on the top of the stack. The time and space complexity is O(1).
+        Removes the element on the top of the stack. The time and space complexity is O(1).
 
-         :return: None
-         """
+        :return: None
+        """
         self.stack.pop()
         self.min_stack.pop()
 
     def top(self) -> int:
         """
-         Gets the top element of the stack. The time and space complexity is O(1).
+        Gets the top element of the stack. The time and space complexity is O(1).
 
-         :return: The top element of the stack.
-         """
+        :return: The top element of the stack.
+        """
         return self.stack[-1]
 
     def getMin(self) -> int:
         """
-         Retrieves the minimum element in the stack. The time and space complexity is O(1).
+        Retrieves the minimum element in the stack. The time and space complexity is O(1).
 
-         :return: The minimum element in the stack
-         """
+        :return: The minimum element in the stack
+        """
         return self.min_stack[-1]

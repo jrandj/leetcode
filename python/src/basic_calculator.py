@@ -5,7 +5,6 @@ class Solution:
 
     Note: You are not allowed to use any built-in function which evaluates strings as mathematical expressions, such as
     eval().
-
     """
 
     def calculate(self, s: str) -> int:
@@ -18,7 +17,6 @@ class Solution:
         The time complexity is O(N) where N is the length of s. Faster than 78.12% of solutions.
 
         The space complexity is O(N) where N is the length of the stack. Less memory than 74.46% of solutions.
-
         """
         stack = []
         # default sign is positive
@@ -69,7 +67,6 @@ class Solution:
 
         :param s: The input string representing an expression.
         :return bool: True if the input is valid, and false otherwise.
-
         """
         if len(s) < 1 or len(s) > int(3 * 10e5):
             return False

@@ -33,7 +33,6 @@ class Solution:
         solutions.
 
         The space complexity is O(N) where N is the length of the combined list. Less memory than 78.99% of solutions.
-
         """
         dummy_head = ListNode()
         tail = dummy_head

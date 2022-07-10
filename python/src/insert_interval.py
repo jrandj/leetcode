@@ -19,7 +19,6 @@ class Solution:
         The time complexity is O(N) as we use iterate through intervals once. Faster than 97.70% of solutions.
 
         The space complexity is O(N) as we create a new list of N elements. Less memory than 24.91% of solutions.
-
         """
         final_list = []
 

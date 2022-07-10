@@ -15,7 +15,6 @@ class Solution:
         The time complexity is O(N) as we iterate through nums twice. Faster than 90.24% of solutions.
 
         The space complexity is O(N) for the hash map. Less memory than 62.66% of solutions.
-
         """
         colors = {}  # color : count
 

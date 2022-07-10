@@ -12,7 +12,6 @@ class Solution:
         The time complexity is O(N) as we iterate through the input array once. Faster than 61.36% of solutions.
 
         The space complexity is O(1). Less memory than 33.69% of solutions.
-
         """
         l, r = 0, len(height) - 1
         left_max, right_max, res = height[l], height[r], 0

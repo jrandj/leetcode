@@ -14,7 +14,6 @@ class ListNode:
 class Solution:
     """
     Given the head of a singly linked list, reverse the list, and return the reversed list.
-
     """
 
     def reverseList_iterative(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -27,7 +26,6 @@ class Solution:
         The time complexity is O(N) where N is the length of the list. Faster than 7.86% of solutions.
 
         The space complexity is O(1). Less memory than 28.35% of solutions.
-
         """
         prev, tail = None, head
 
@@ -54,7 +52,6 @@ class Solution:
         The time complexity is O(N) where N is the length of the list. Faster than 23.64% of solutions.
 
         The space complexity is O(N) due to the function stack from recursion. Less memory than 16.77% of solutions.
-
         """
         # trivial case
         if head is None:

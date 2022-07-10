@@ -32,7 +32,6 @@ class Solution:
         The time complexity is O(N) where N is the length of the list. Faster than 22.82% of solutions.
 
         The space complexity is O(1). Less memory than 66.33% of solutions.
-
         """
         fast_pointer, slow_pointer = head, head
 

@@ -17,7 +17,6 @@ class Solution:
         The time complexity is O(N) where N is the length of heights. Faster than 44.78% of solutions.
 
         The space complexity is O(N) where N is the length of the stack. Less memory than 11.11% of solutions.
-
         """
         if not self.valid_input(heights):
             return 0
@@ -48,7 +47,6 @@ class Solution:
 
         :param heights: The list of histogram bar heights.
         :return bool: True if the input is valid, and false otherwise.
-
         """
         if len(heights) > int(1e5):
             return False

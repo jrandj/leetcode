@@ -13,7 +13,6 @@ class Solution:
         The time complexity is O(N) where N is the length of the input array. Faster than 92.32% of solutions.
 
         The space complexity is O(1) as no additional data structures are used. Less memory than 53.94% of solutions.
-
         """
         l, r = 0, len(height) - 1
         maxArea = -1

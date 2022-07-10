@@ -14,7 +14,6 @@ class Solution:
         The time complexity is O(N) as we iterate through the input array once. Faster than 89.82% of solutions.
 
         The space complexity is constant. Less memory than 7.11% of solutions.
-
         """
         # this solution requires that we can "see the future" (1 + ith element)
         max_profit, left_pointer, right_pointer = 0, 0, 1

@@ -19,7 +19,6 @@ class Solution:
 
         The space complexity is O(N) for the recursion stack and to hold the list. This depends on the length of
         the longest solution which is equal to target/min of candidates. Less memory than 57.10% of solutions.
-
         """
         self.res = []
         self.candidates = candidates

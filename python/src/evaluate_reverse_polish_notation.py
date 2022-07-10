@@ -18,7 +18,6 @@ class Solution:
         The time complexity is O(N) where N is the length of tokens. Faster than 99.99% of solutions.
 
         The space complexity is O(N) where N is the length of tokens. Less memory than 56.76% of solutions.
-
         """
         stack = []
 

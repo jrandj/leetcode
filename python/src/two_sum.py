@@ -14,7 +14,6 @@ class Solution:
         The time complexity is O(N^2) as we use 2 nested for loops. Faster than 22.50% of solutions.
 
         The space complexity is constant. Less memory than 76.44% of solutions.
-
         """
         for i, iVal in enumerate(nums):
             # we only need to look for the elements after the current element
@@ -35,7 +34,6 @@ class Solution:
         The time complexity is O(N) as we iterate over the array once. Faster than 88.91% of solutions.
 
         The space complexity is O(N) for the hash map. Less memory than 24.32% of solutions.
-
         """
         existing_values = {}  # hash map containing val: index
         for i, iVal in enumerate(nums):

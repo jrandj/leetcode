@@ -12,7 +12,6 @@ class Solution:
         The time complexity is O(N) as we iterate through the input array once. Faster than 17.13% of solutions.
 
         The space complexity is O(N) as we use a Hash Map containing all elements. Less memory than 72.28% of solutions.
-
         """
         unique_values = {}  # value: count
 
@@ -37,7 +36,6 @@ class Solution:
         solutions.
 
         The space complexity is O(1) as we only use constants. Less memory than 29.99% of solutions.
-
         """
         l, r = 0, 1
         nums.sort()

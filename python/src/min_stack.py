@@ -10,7 +10,6 @@ class MinStack:
         - int getMin() retrieves the minimum element in the stack.
 
     Faster than 99.99% of solutions. Less memory than 56.76% of solutions.
-
     """
 
     def __init__(self):

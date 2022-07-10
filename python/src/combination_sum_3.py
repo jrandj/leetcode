@@ -19,7 +19,6 @@ class Solution:
 
         The space complexity is O(k) for the recursion stack and to hold the list. Less memory than 77.39% of
         solutions.
-
         """
         self.k = k
         self.n = n

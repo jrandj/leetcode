@@ -16,7 +16,6 @@ class Solution:
         The time complexity is O(N) as we iterate through nums twice. Faster than 44.36% of solutions.
 
         The space complexity is O(1) as we don't use any additional memory. Less memory than 80.80% of solutions.
-
         """
         res = [1] * len(nums)
 

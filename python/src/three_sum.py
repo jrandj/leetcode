@@ -15,7 +15,6 @@ class Solution:
         solutions.
 
         The space complexity is O(N) as we sort. Less memory than 22.23% of solutions.
-
         """
         res = []
         nums.sort()

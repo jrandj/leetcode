@@ -13,7 +13,6 @@ class Solution:
         of solutions.
 
         The space complexity is O(N) to hold the output list. Less memory than 24.84% of solutions.
-
         """
         # sort the input array by the lowest interval
         intervals.sort(key=lambda i: i[0])

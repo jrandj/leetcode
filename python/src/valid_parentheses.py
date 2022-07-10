@@ -12,7 +12,6 @@ class Solution:
         The time complexity is O(N) where N is the length of s. Faster than 90.82% of solutions.
 
         The space complexity is O(N) where N is the length of s. Less memory than 69.44% of solutions.
-
         """
         stack = []
         closeToOpen = {")": "(", "]": "[", "}": "{"}

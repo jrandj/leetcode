@@ -29,7 +29,7 @@ class MyQueue:
         Pushes element x to the back of the queue. The time and space complexity is O(N).
 
         :param x: The int to be added to the queue.
-        :return: None
+        :return None
         """
         # an element at the back of the queue should be at the bottom of the stack
         # add elements from s1 to s2 in reverse order
@@ -47,7 +47,7 @@ class MyQueue:
         """
         Removes the element from the front of the queue and returns it. The time and space complexity is O(1).
 
-        :return: The last element from the front of the queue.
+        :return int: The last element from the front of the queue.
         """
         if self.s1:
             return self.s1.pop()
@@ -56,7 +56,7 @@ class MyQueue:
         """
         Returns the element at the front of the queue. The time and space complexity is O(1).
 
-        :return: The last element from the front of the queue.
+        :return int: The last element from the front of the queue.
         """
         if self.s1:
             return self.s1[-1]
@@ -65,6 +65,6 @@ class MyQueue:
         """
         Returns the element at the front of the queue. The time and space complexity is O(1).
 
-        :return: True if the queue is empty and false otherwise.
+        :return bool: True if the queue is empty and false otherwise.
         """
         return len(self.s1) == 0

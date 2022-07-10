@@ -11,6 +11,7 @@ class Solution:
         You must solve this problem without using the library's sort function.
 
         :param nums : The input array.
+        :return None
 
         The time complexity is O(N) as we iterate through nums twice. Faster than 90.24% of solutions.
 

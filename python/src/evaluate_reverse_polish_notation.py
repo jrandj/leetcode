@@ -14,6 +14,7 @@ class Solution:
         result, and there will not be any division by zero operation.
 
         :param tokens: The list of tokens.
+        :return int: The result of evaluating the expression.
 
         The time complexity is O(N) where N is the length of tokens. Faster than 99.99% of solutions.
 

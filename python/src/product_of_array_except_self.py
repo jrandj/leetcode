@@ -11,7 +11,7 @@ class Solution:
         You must write an algorithm that runs in O(n) time and without using the division operation.
 
         :param nums: The input list.
-        :return List[List[int]: The output list.
+        :return List[int]: The output list.
 
         The time complexity is O(N) as we iterate through nums twice. Faster than 44.36% of solutions.
 

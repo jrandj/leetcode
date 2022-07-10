@@ -9,6 +9,7 @@ class Solution:
         can store. Notice that you may not slant the container.
 
         :param height: The height of the container.
+        :return int: The maximum amount of water.
 
         The time complexity is O(N) where N is the length of the input array. Faster than 92.32% of solutions.
 

@@ -44,7 +44,7 @@ class MinStack:
         """
         Gets the top element of the stack. The time and space complexity is O(1).
 
-        :return: The top element of the stack.
+        :return int: The top element of the stack.
         """
         return self.stack[-1]
 
@@ -52,6 +52,6 @@ class MinStack:
         """
         Retrieves the minimum element in the stack. The time and space complexity is O(1).
 
-        :return: The minimum element in the stack
+        :return int: The minimum element in the stack
         """
         return self.min_stack[-1]

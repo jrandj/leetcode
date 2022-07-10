@@ -8,6 +8,7 @@ class Solution:
             - Open brackets must be closed in the correct order.
 
         :param s: The input string.
+        :return bool: True if s is valid, and False otherwise.
 
         The time complexity is O(N) where N is the length of s. Faster than 90.82% of solutions.
 

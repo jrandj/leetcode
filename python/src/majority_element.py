@@ -9,7 +9,7 @@ class Solution:
         element always exists in the array.
 
         :param nums: The input array.
-        :return List[int]: A list of indices.
+        :return int: The majority element.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 28.65% of solutions.
 
@@ -33,7 +33,7 @@ class Solution:
         element always exists in the array.
 
         :param nums: The input array.
-        :return List[int]: A list of indices.
+        :return int: The majority element.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 69.51% of solutions.
 

@@ -14,7 +14,6 @@ def list_equality_helper(node1: Optional[ListNode], node2: Optional[ListNode]) -
     The time complexity is O(N) where N is the overlapping length of list1 and list2.
 
     The space complexity is O(N) where N is the length of the combined list.
-
     """
     while node1 and node2:
         if node1.val != node2.val:

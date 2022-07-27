@@ -21,9 +21,9 @@ class Solution:
         :param t: The second input string.
         :return str: The minimum substring of s such that characters in t are included in the window.
 
-        The time complexity is O(s + t) as we iterate through at most s and t.
+        The time complexity is O(s + t) as we iterate through at most s and t. Faster than 63.84% of solutions.
 
-        The space complexity is O(s + t) for the stack.
+        The space complexity is O(s + t) for the stack. Less memory than 82.83% of solutions.
         """
         # handle the trivial case
         if t == '':

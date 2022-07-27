@@ -7,6 +7,13 @@ class TreeNode:
     """
 
     def __init__(self, val=0, left=None, right=None):
+        """
+        Initialise a Tree.
+
+        :param val: The value of the node.
+        :param left: The node to the left of the current node.
+        :param right: The node to the right of the current node.
+        """
         self.val = val
         self.left = left
         self.right = right

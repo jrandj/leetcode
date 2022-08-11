@@ -5,3 +5,5 @@ java/.checkstyle
 java/.classpath
 java/.project
 python/.idea
+python/src/__pycache__/*
+python/test/__pycache__/*

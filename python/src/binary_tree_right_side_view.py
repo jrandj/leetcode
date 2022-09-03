@@ -12,8 +12,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -38,7 +41,9 @@ class Solution:
         you can see ordered from top to bottom.
 
         :param root: The root node for the tree.
-        :return List[int]: The right side path.
+        :type root: TreeNode.
+        :return: The right side path.
+        :rtype: List[int].
 
         The time complexity is O(N) as we visit every node in the tree. Faster than 56.48% of solutions.
 

@@ -12,7 +12,9 @@ class Solution:
         Given a string s, return true if it is a palindrome, or false otherwise.
 
         :param s: The input string.
-        :return bool: True if s is a palindrome, and False otherwise.
+        :type s: Str.
+        :return: True if s is a palindrome, and False otherwise.
+        :rtype: Bool.
 
         The time complexity is O(N) as it iterates through the input once. Faster than 81.74% of solutions.
 

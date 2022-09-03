@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -40,25 +43,32 @@ class Codec:
     """
 
     def __init__(self) -> None:
+        """
+        Initialise the Codec.
+        """
         self.res = []
         self.i = 0
 
     def serialize(self, root: TreeNode) -> str:
-        """Encodes a tree to a single string.
+        """
+        Encodes a tree to a single string.
 
         :param root: The root of the tree to be serialized.
-        :return str: The string representation of the serialized tree.
+        :type root: TreeNode.
+        :return: The string representation of the serialized tree.
+        :rtype: Str.
         """
         self.serialize_helper(root)
         return ",".join(self.res)
 
     def serialize_helper(self, node: TreeNode) -> None:
         """
-        A helper for the serialize method.
+        A helper method for serialization.
 
-        :param node:
-        :param res:
-        :return None.
+        :param node: The current node.
+        :type node: TreeNode.
+        :return: NoneType.
+        :rtype: NoneType.
         """
         if not node:
             self.res.append("N")
@@ -72,7 +82,9 @@ class Codec:
         Decodes your encoded data to tree.
 
         :param data: The string representation of a tree to be deserialized.
-        :return TreeNode: The root of the serialized tree.
+        :type data: Str.
+        :return: The root node of the deserialized tree.
+        :rtype: TreeNode.
         """
         vals = data.split(",")
         return self.deserialize_helper(vals)
@@ -82,7 +94,9 @@ class Codec:
         A helper for the deserialize method.
 
         :param vals: The list of ints representing the tree to be deserialized.
-        :return TreeNode: The root of the deserialized tree.
+        :type vals: List.
+        :return: The current node being deserialized.
+        :rtype: TreeNode.
         """
         if vals[self.i] == "N":
             self.i += 1

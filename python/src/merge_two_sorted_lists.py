@@ -7,6 +7,14 @@ class ListNode:
     """
 
     def __init__(self, val=0, next=None):
+        """
+        Initialise the ListNode.
+
+        :param val: The value of the ListNode.
+        :type val: Int.
+        :param next: A reference to the next ListNode.
+        :type next: ListNode, NoneType.
+        """
         self.val = val
         self.next = next
 
@@ -26,8 +34,11 @@ class Solution:
         Merge the two lists in a one sorted list.
 
         :param list1: The head of the first sorted linked list.
+        :type list1: ListNode.
         :param list2: The head of the second sorted linked list.
-        :return ListNode: The head of the merged linked list.
+        :type list2: ListNode.
+        :return: The head of the merged linked list.
+        :rtype: ListNode.
 
         The time complexity is O(N) where N is the overlapping length of list1 and list2. Faster than 14.89% of
         solutions.

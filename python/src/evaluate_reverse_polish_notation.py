@@ -10,11 +10,13 @@ class Solution:
 
         Note that division between two integers should truncate toward zero.
 
-        It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate to a
-        result, and there will not be any division by zero operation.
+        It is guaranteed that the given RPN expression is always valid. That means the expression would always evaluate
+        to a result, and there will not be any division by zero operation.
 
         :param tokens: The list of tokens.
-        :return int: The result of evaluating the expression.
+        :type tokens: List[str].
+        :return: The result of evaluating the expression.
+        :rtype: Int.
 
         The time complexity is O(N) where N is the length of tokens. Faster than 99.99% of solutions.
 

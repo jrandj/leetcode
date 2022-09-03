@@ -15,8 +15,11 @@ class Solution:
         Given two strings s and p, return an array of all the start indices of p's anagrams in s.
 
         :param s: The string that will anagrams will be searched for in.
+        :type s: Str.
         :param p: The string used to generate anagrams to find in s.
-        :return List: A list of the starting indices.
+        :type p: Str.
+        :return: A list of the starting indices.
+        :rtype: List[int]
 
         The time complexity seems like O(s*p), but is actually O(s) if you consider that p can only be length 26 as
         it is limited to characters a-z. Faster than 78.72% of solutions.

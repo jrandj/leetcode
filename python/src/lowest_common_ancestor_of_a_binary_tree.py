@@ -8,8 +8,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -28,10 +31,14 @@ class Solution:
         """
         Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 
-        :param cur: The root node of the tree.
+        :param root: The root node of the tree.
+        :type root: TreeNode.
         :param p: The first node for determining LCA.
+        :type p: TreeNode.
         :param q: The second node for determining LCA.
-        :return TreeNode: The LCA.
+        :type q: TreeNode.
+        :return: The LCA.
+        :rtype: TreeNode.
 
         The time complexity is O(N) as we traverse the tree. Faster than 84.90% of solutions.
 
@@ -44,9 +51,13 @@ class Solution:
         Helper method to find the LCA.
 
         :param cur: The current node of the tree.
+        :type cur: TreeNode.
         :param p: The first node for determining LCA.
+        :type p: TreeNode.
         :param q: The second node for determining LCA.
-        :return TreeNode: The LCA.
+        :type q: TreeNode.
+        :return: The LCA.
+        :rtype: TreeNode.
         """
         # return when we hit a leaf node
         if not cur:

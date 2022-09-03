@@ -3,13 +3,17 @@ from typing import List
 
 class Solution:
     def two_sum_a(self, nums: List[int], target: int) -> List[int]:
-        """Given an array of integers nums and an integer target, return indices of the two numbers such that they add
+        """
+        Given an array of integers nums and an integer target, return indices of the two numbers such that they add
         up to target. You may assume that each input would have exactly one solution, and you may not use the same
         element twice. You can return the answer in any order.
 
         :param nums: The input array.
+        :type nums: List[int].
         :param target: The target number:
-        :return List[int]: A list of indices.
+        :type target: Int.
+        :return: A list of indices.
+        :rtype: List[int].
 
         The time complexity is O(N^2) as we use 2 nested for loops. Faster than 22.50% of solutions.
 
@@ -23,13 +27,17 @@ class Solution:
                     return [i, i + j + 1]
 
     def two_sum_b(self, nums: List[int], target: int) -> List[int]:
-        """Given an array of integers nums and an integer target, return indices of the two numbers such that they add
+        """
+        Given an array of integers nums and an integer target, return indices of the two numbers such that they add
         up to target. You may assume that each input would have exactly one solution, and you may not use the same
         element twice. You can return the answer in any order.
 
         :param nums: The input array.
+        :type nums: List[int].
         :param target: The target number:
-        :return List[int]: A list of indices.
+        :type target: Int.
+        :return: A list of indices.
+        :rtype: List[int].
 
         The time complexity is O(N) as we iterate over the array once. Faster than 88.91% of solutions.
 

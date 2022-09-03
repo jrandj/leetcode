@@ -12,7 +12,9 @@ class Solution:
         Calculate the largest rectangle area.
 
         :param heights: The list of histogram bar heights.
-        :return int: The maximum rectangle height.
+        :type heights: List[int].
+        :return: The maximum rectangle height.
+        :rtype: Int.
 
         The time complexity is O(N) where N is the length of heights. Faster than 44.78% of solutions.
 
@@ -46,7 +48,9 @@ class Solution:
         Validate the input that can be validated without iteration.
 
         :param heights: The list of histogram bar heights.
-        :return bool: True if the input is valid, and false otherwise.
+        :type heights: List[int].
+        :return: True if the input is valid, and false otherwise.
+        :rtype: Bool.
         """
         if len(heights) > int(1e5):
             return False

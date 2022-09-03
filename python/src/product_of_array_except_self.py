@@ -3,15 +3,18 @@ from typing import List
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        """Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the
-         elements of nums except nums[i].
+        """
+        Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the
+        elements of nums except nums[i].
 
         The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
 
-        You must write an algorithm that runs in O(n) time and without using the division operation.
+        You must write an algorithm that runs in O(N) time and without using the division operation.
 
         :param nums: The input list.
-        :return List[int]: The output list.
+        :type nums: List[int].
+        :return: The output list.
+        :rtype: List[int].
 
         The time complexity is O(N) as we iterate through nums twice. Faster than 44.36% of solutions.
 

@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -29,12 +32,9 @@ class Solution:
         Given the root of a binary tree, invert the tree, and return its root.
 
         :param root: The root node of the input tree.
-        :return TreeNode: The root node of the inverted tree.
-
-        The time complexity is O(N) where N is the number of nodes in the tree. Faster than 19.16% of solutions.
-
-        The space complexity is O(1) as there are no additional data structures used. Less memory than 96.10% of
-        solutions.
+        :type root: TreeNode.
+        :return: The root node of the inverted tree.
+        :rtype: TreeNode.
         """
         if not root:
             return None

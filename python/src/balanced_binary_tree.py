@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -32,11 +35,9 @@ class Solution:
         Given a binary tree, determine if it is height-balanced.
 
         :param root: The root of the tree.
+        :type root: TreeNode.
         :return: True if the tree is height balanced, and False otherwise.
-
-        The time complexity is O(N) as we visit every node in the tree. Faster than 15.78% of solutions.
-
-        The space complexity is O(N) for the recursive stack. Less memory than 43.70% of solutions.
+        :rtype: Bool.
         """
         if root is None:
             return True
@@ -57,7 +58,9 @@ class Solution:
         Calculate the height of a tree.
 
         :param root: The root node of the tree.
-        :return int: The height of the tree.
+        :type root: TreeNode.
+        :return: The height of the tree.
+        :rtype: Int.
         """
         if root is None:
             return 0

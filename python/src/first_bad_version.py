@@ -19,7 +19,9 @@ class Solution:
         Implement a function to find the first bad version. You should minimize the number of calls to the API.
 
         :param n: The int representing the version.
-        :return int: The int representing the first bad version.
+        :type n: Int.
+        :return: The int representing the first bad version.
+        :rtype: Int.
 
         The time complexity is O(N LOG(N)) as we halve the search space every iteration. Faster than 60.54% of
         solutions.

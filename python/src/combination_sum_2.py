@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
-        """Given a collection of candidate numbers (candidates) and a target number (target), find all unique
+        """
+        Given a collection of candidate numbers (candidates) and a target number (target), find all unique
         combinations in candidates where the candidate numbers sum to target.
 
         Each number in candidates may only be used once in the combination.
@@ -11,8 +12,11 @@ class Solution:
         Note: The solution set must not contain duplicate combinations.
 
         :param candidates: The list of candidates.
+        :type candidates: List[int].
         :param target: The target number.
-        :return List[List[int]: The list of combinations that sum to the target.
+        :type target: Int.
+        :return: The list of combinations that sum to the target.
+        :rtype: List[List[int]].
 
         The time complexity is O(K * 2^N) where K is the average length of each solution and N is the length of the
         input list. Faster than 20.65% of solutions.
@@ -31,6 +35,18 @@ class Solution:
         return self.res
 
     def backtrack(self, pos, cur, total):
+        """
+        A helper method for backtracking.
+
+        :param pos: Int.
+        :type pos: The current position.
+        :param cur: List.
+        :type cur: The current sum.
+        :param total: Int.
+        :type total: The current total.
+        :return: NoneType.
+        :rtype: NoneType.
+        """
         # base cases
         if total == self.target:
             self.res.append(cur.copy())

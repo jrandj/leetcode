@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -39,7 +42,9 @@ class Solution:
         Given the root of a binary tree, return the length of the diameter of the tree.
 
         :param root: The root node of the tree.
-        :return int: The length of the path between two nodes.
+        :type root: TreeNode.
+        :return: The length of the path between two nodes.
+        :rtype: Int.
 
         The time complexity is O(N) as we visit all nodes in the tree. Faster than 34.91% of solutions.
 
@@ -56,7 +61,9 @@ class Solution:
         Return the height of the deepest subtree of root.
 
         :param root: The root node of the tree.
+        :type root: TreeNode.
         :return: The height of the deepest subtree of root.
+        :rtype: Int.
         """
         if root is None:
             return 0

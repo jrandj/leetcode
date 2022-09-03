@@ -18,8 +18,11 @@ class Solution:
         every character in t (including duplicates) is included in the window.
 
         :param s: The first input string.
+        :type s: Str.
         :param t: The second input string.
-        :return str: The minimum substring of s such that characters in t are included in the window.
+        :type t: Str.
+        :return: The minimum substring of s such that characters in t are included in the window.
+        :rtype: Str.
 
         The time complexity is O(s + t) as we iterate through at most s and t. Faster than 63.84% of solutions.
 

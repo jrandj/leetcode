@@ -3,13 +3,16 @@ from typing import List
 
 class Solution:
     def majorityElement_a(self, nums: List[int]) -> int:
-        """Given an array nums of size n, return the majority element.
+        """
+        Given an array nums of size n, return the majority element.
 
         The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority
         element always exists in the array.
 
         :param nums: The input array.
-        :return int: The majority element.
+        :type nums: List[int].
+        :return: The majority element.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 28.65% of solutions.
 
@@ -27,13 +30,16 @@ class Solution:
         return candidate_result
 
     def majorityElement_b(self, nums: List[int]) -> int:
-        """Given an array nums of size n, return the majority element.
+        """
+        Given an array nums of size n, return the majority element.
 
         The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority
         element always exists in the array.
 
         :param nums: The input array.
-        :return int: The majority element.
+        :type nums: List[int].
+        :return: The majority element.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 69.51% of solutions.
 

@@ -8,8 +8,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -30,9 +33,13 @@ class Solution:
         Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
 
         :param root: The root node of the tree.
+        :type root: TreeNode.
         :param p: The first node for determining LCA.
+        :type p: TreeNode.
         :param q: The second node for determining LCA.
-        :return TreeNode: The LCA.
+        :type q: TreeNode.
+        :return: The LCA.
+        :rtype: TreeNode.
 
         The time complexity is O(N) as we traverse the tree. Faster than 96.91% of solutions.
 

@@ -8,7 +8,9 @@ class Solution:
         Given a string s, return the longest palindromic substring in s.
 
         :param s: The input string.
-        :return str: The longest palindromic substring in s.
+        :type s: Str.
+        :return: The longest palindromic substring in s.
+        :rtype: Str.
 
         The time complexity is O(N^2) as for each element we find the longest palindrome. Faster than 56.95% of
         solutions.
@@ -36,9 +38,13 @@ class Solution:
         A helper function to find palindromes.
 
         :param s: The input string.
+        :type s: Str.
         :param l: The starting index for the left.
+        :type l: Int.
         :param r: The starting index for the right.
-        :return tuple: The left and right indices of the palindrome.
+        :type r: Int.
+        :return: The left and right indices of the palindrome.
+        :rtype: Tuple.
         """
         while l >= 0 and r < len(s) and s[l] == s[r]:
             l -= 1

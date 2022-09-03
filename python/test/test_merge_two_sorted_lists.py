@@ -9,8 +9,11 @@ def list_equality_helper(node1: Optional[ListNode], node2: Optional[ListNode]) -
     Compare 2 linked lists for equality.
 
     :param node1: The head of the first linked list.
+    :type node1: ListNode.
     :param node2: The head of the second linked list.
-    :return bool: True if equal, false otherwise.
+    :type node2: ListNode.
+    :return: True if equal, false otherwise.
+    :rtype: Bool.
 
     The time complexity is O(N) where N is the overlapping length of list1 and list2.
 

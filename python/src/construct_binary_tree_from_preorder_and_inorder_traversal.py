@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -31,8 +34,11 @@ class Solution:
         inorder is the inorder traversal of the same tree, construct and return the binary tree.
 
         :param preorder: The preorder traversal of the tree.
+        :type preorder: List[int].
         :param inorder: The inorder traversal of the tree.
-        :return Optional[TreeNode]: The root of the constructed tree.
+        :type inorder: List[int].
+        :return: The root of the constructed tree.
+        :rtype: TreeNode.
 
         The time complexity is O(N) as we iterate through the nodes once. Faster than 87.99% of solutions.
 
@@ -48,10 +54,15 @@ class Solution:
         Helper method for buildTree.
 
         :param preorder: The preorder traversal of the tree.
+        :type preorder: List[int].
         :param inorder_dict: The dictionary for fast index lookup based on value.
+        :type inorder_dict: List[int].
         :param start: The starting position.
+        :type start: Int.
         :param end: The ending position.
-        :return Optional[TreeNode]: The root of the constructed tree.
+        :type end: Int.
+        :return: The root of the constructed tree.
+        :rtype: TreeNode.
         """
         if start > end:
             return None

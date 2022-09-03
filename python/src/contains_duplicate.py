@@ -3,11 +3,14 @@ from typing import List
 
 class Solution:
     def containsDuplicate_a(self, nums: List[int]) -> bool:
-        """Given an integer array nums, return true if any value appears at least twice in the array, and return false
+        """
+        Given an integer array nums, return true if any value appears at least twice in the array, and return false
         if every element is distinct.
 
         :param nums: The input array.
-        :return bool: True if any value appears at least twice and false otherwise.
+        :type nums: Int.
+        :return: True if any value appears at least twice and false otherwise.
+        :rtype: Bool.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 17.13% of solutions.
 
@@ -26,14 +29,16 @@ class Solution:
         return False
 
     def containsDuplicate_b(self, nums: List[int]) -> bool:
-        """Given an integer array nums, return true if any value appears at least twice in the array, and return false
+        """
+        Given an integer array nums, return true if any value appears at least twice in the array, and return false
         if every element is distinct.
 
         :param nums: The input array.
-        :return bool: True if any value appears at least twice and false otherwise.
+        :type nums: List[int].
+        :return: True if any value appears at least twice and false otherwise.
+        :rtype: Bool.
 
-        The time complexity is O(N LOG(N)) as we sort the array. Faster than 52.77% of
-        solutions.
+        The time complexity is O(N LOG(N)) as we sort the array. Faster than 52.77% of solutions.
 
         The space complexity is O(1) as we only use constants. Less memory than 29.99% of solutions.
         """

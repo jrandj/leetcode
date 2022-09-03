@@ -3,11 +3,14 @@ from typing import List
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
-        """Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and
+        """
+        Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and
         return an array of the non-overlapping intervals that cover all the intervals in the input.
 
         :param intervals: The input intervals.
-        :return List[List[int]: The list of overlapping intervals.
+        :type intervals: List[List[int]].
+        :return: The list of overlapping intervals.
+        :rtype: List[List[int]].
 
         The time complexity is O(N * LOG(N)) due to sorting, where N is the length of candidates. Faster than 68.33%
         of solutions.

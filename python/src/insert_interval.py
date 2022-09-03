@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
-        """You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent
+        """
+        You are given an array of non-overlapping intervals (intervals) where intervals[i] = [starti, endi] represent
         the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also
         given an interval newInterval = [start, end] that represents the start and end of another interval.
 
@@ -13,8 +14,11 @@ class Solution:
         Return intervals after the insertion.
 
         :param intervals: A list of intervals.
+        :type intervals: List[List[int]]
         :param newInterval: A new interval for insertion.
-        :return List[List[int]: A list of a list of intervals.
+        :type newInterval: List[int]
+        :return: A list of a list of intervals.
+        :rtype:  List[List[int]]
 
         The time complexity is O(N) as we use iterate through intervals once. Faster than 97.70% of solutions.
 

@@ -7,6 +7,12 @@ class ListNode:
     """
 
     def __init__(self, x):
+        """
+        Initialise the ListNode.
+
+        :param x: The value of the ListNode.
+        :type x: Int.
+        """
         self.val = x
         self.next = None
 
@@ -22,8 +28,10 @@ class Solution:
         """
         Given the head of a singly linked list, return the middle node of the linked list.
 
-        :param head : The head of the linked list.
-        :return ListNode: The middle node of the linked list.
+        :param head: The head of the linked list.
+        :type head: ListNode.
+        :return: The middle node of the linked list.
+        :rtype: ListNode.
 
         The time complexity is O(N) where N is the length of the list. Faster than 92.87% of solutions.
 

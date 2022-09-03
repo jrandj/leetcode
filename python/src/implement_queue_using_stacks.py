@@ -26,10 +26,14 @@ class MyQueue:
 
     def push(self, x: int) -> None:
         """
-        Pushes element x to the back of the queue. The time and space complexity is O(N).
+        Pushes element x to the back of the queue.
 
         :param x: The int to be added to the queue.
-        :return None
+        :type x: Int.
+        :return: NoneType.
+        :rtype: NoneType.
+
+        The time and space complexity is O(N).
         """
         # an element at the back of the queue should be at the bottom of the stack
         # add elements from s1 to s2 in reverse order
@@ -45,26 +49,34 @@ class MyQueue:
 
     def pop(self) -> int:
         """
-        Removes the element from the front of the queue and returns it. The time and space complexity is O(1).
+        Returns the element at the front of the queue.
+        :return: True if the queue is empty and false otherwise.
+        :rtype: Bool.
 
-        :return int: The last element from the front of the queue.
+        The time and space complexity is O(1).
         """
         if self.s1:
             return self.s1.pop()
 
     def peek(self) -> int:
         """
-        Returns the element at the front of the queue. The time and space complexity is O(1).
+        Returns the element at the front of the queue.
 
-        :return int: The last element from the front of the queue.
+        :return: The last element from the front of the queue.
+        :rtype: Int.
+
+        The time and space complexity is O(1).
         """
         if self.s1:
             return self.s1[-1]
 
     def empty(self) -> bool:
         """
-        Returns the element at the front of the queue. The time and space complexity is O(1).
+        Returns the element at the front of the queue.
 
-        :return bool: True if the queue is empty and false otherwise.
+        :return: True if the queue is empty and false otherwise.
+        :rtype: Bool.
+
+        The time and space complexity is O(1).
         """
         return len(self.s1) == 0

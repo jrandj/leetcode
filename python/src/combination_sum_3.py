@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        """Find all valid combinations of k numbers that sum up to n such that the following conditions are true:
+        """
+        Find all valid combinations of k numbers that sum up to n such that the following conditions are true:
             - Only numbers 1 through 9 are used.
             - Each number is used at most once.
 
@@ -11,8 +12,11 @@ class Solution:
         combinations may be returned in any order.
 
         :param k: The number of combinations that sum to the target sum.
+        :type k: Int.
         :param n: The target sum.
-        :return List[List[int]: The list of all possible combinations.
+        :type n: Int.
+        :return: The list of all possible combinations.
+        :rtype: List[List[int]].
 
         The time complexity is O(k * 9^k) as the recursion depth is k and there are 9 digits to choose from. Faster
         than 82.38% of solutions.
@@ -29,6 +33,18 @@ class Solution:
         return self.res
 
     def backtrack(self, num, cur, target):
+        """
+        A helper method for backtracking.
+
+        :param num: The current number.
+        :type num: Int.
+        :param cur: The current result.
+        :type cur: List.
+        :param target: The current target.
+        :type target: Int.
+        :return: NoneType.
+        :rtype: NoneType.
+        """
         # base cases
         if len(cur) == self.k:
             if target == 0:

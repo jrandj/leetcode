@@ -12,7 +12,9 @@ class Solution:
         that can be built with those letters.
 
         :param s: The input string.
-        :return int: The length of the longest palindrome.
+        :type s: Str.
+        :return: The length of the longest palindrome.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate through the input once. Faster than 55.41% of solutions.
 

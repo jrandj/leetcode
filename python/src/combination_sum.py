@@ -3,7 +3,8 @@ from typing import List
 
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
-        """Given an array of distinct integers candidates and a target integer target, return a list of all unique
+        """
+        Given an array of distinct integers candidates and a target integer target, return a list of all unique
         combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
 
         The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the
@@ -13,8 +14,11 @@ class Solution:
         for the given input.
 
         :param candidates: The list of candidates.
+        :type candidates: List[int].
         :param target: The target number.
-        :return List[List[int]: The list of combinations that sum to the target.
+        :type target: Int.
+        :return: The list of combinations that sum to the target.
+        :rtype: List[List[int]].
 
         The time complexity is O(K * 2^N') where K is the average length of each solution, and N' is the length of the
         new array. Faster than 26.10% of solutions.
@@ -29,6 +33,18 @@ class Solution:
         return self.res
 
     def backtrack(self, i, cur, total):
+        """
+        A helper method for backtracking.
+
+        :param i: The current index.
+        :type i: Int.
+        :param cur:  The current result.
+        :type cur: List.
+        :param total: The current total.
+        :type total: Int.
+        :return: When the target has been achieved or can no longer be achieved.
+        :rtype: NoneType.
+        """
         # base cases
         if total == self.target:
             self.res.append(cur.copy())

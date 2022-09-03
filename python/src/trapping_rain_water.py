@@ -8,7 +8,9 @@ class Solution:
         much water it can trap after raining.
 
         :param height: The list representing an elevation map.
-        :return int: The amount of water that can be trapped.
+        :type height: List[int].
+        :return: The amount of water that can be trapped.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate through the input array once. Faster than 61.36% of solutions.
 

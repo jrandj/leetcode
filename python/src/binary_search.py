@@ -15,8 +15,11 @@ class Solution:
         search target in nums. If target exists, then return its index. Otherwise, return -1.
 
         :param nums: The array of integer nums.
+        :type nums: List[int].
         :param target: The integer target.
-        :return int: The index of the target if it exists in nums, and -1 if it is not found.
+        :type target: Int.
+        :return: The index of the target if it exists in nums, and -1 if it is not found.
+        :rtype: Int.
 
         The time complexity is O(N LOG(N)) as we halve the search space each iteration. Faster than 14.93% of solutions.
 

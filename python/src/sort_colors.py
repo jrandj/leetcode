@@ -3,15 +3,18 @@ from typing import List
 
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
-        """Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the
+        """
+        Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the
         same color are adjacent, with the colors in the order red, white, and blue.
 
         We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
 
         You must solve this problem without using the library's sort function.
 
-        :param nums : The input array.
-        :return None
+        :param nums: The input array.
+        :type nums: List[int].
+        :return: NoneType.
+        :rtype: NoneType.
 
         The time complexity is O(N) as we iterate through nums twice. Faster than 90.24% of solutions.
 

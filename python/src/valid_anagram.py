@@ -11,17 +11,20 @@ class Solution:
         Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
         :param s: The first string.
+        :type s: Str.
         :param t: The second string.
-        :return bool: True if t is an anagram of s, and False otherwise.
+        :type t: Str.
+        :return: True if t is an anagram of s, and False otherwise.
+        :rtype: Bool
 
         The time complexity is O(t + s) as we iterate through both. Faster than 25.65% of solutions.
+
         The space complexity is O(s) for the dict. Less memory than 96.94% of solutions.
 
         Both strings could also be sorted and compared, this would have a time complexity of O(s LOG(s) + t LOG(t) and
         use some memory depending on the sorting algorithm, so overall is not a better solution but possibly trading
         time complexity for space complexity.
         """
-
         # handle the trivial case
         if len(s) != len(t):
             return False

@@ -12,7 +12,9 @@ class Solution:
         Calculate the value of the expression.
 
         :param s: The input string representing an expression.
-        :return int: The result of evaluating the expression.
+        :type s: Str.
+        :return: The result of evaluating the expression.
+        :rtype: Int.
 
         The time complexity is O(N) where N is the length of s. Faster than 78.12% of solutions.
 
@@ -66,7 +68,9 @@ class Solution:
         Validate the input for the calculator that can be done without iteration.
 
         :param s: The input string representing an expression.
-        :return bool: True if the input is valid, and false otherwise.
+        :type s: Str.
+        :return: True if the input is valid, and false otherwise.
+        :rtype: Int.
         """
         if len(s) < 1 or len(s) > int(3 * 10e5):
             return False

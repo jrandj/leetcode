@@ -8,7 +8,9 @@ class Solution:
         Given a string s, find the length of the longest substring without repeating characters.
 
         :param s: The input string.
-        :return int: The longest substring without repeating characters.
+        :type s: Str.
+        :return: The longest substring without repeating characters.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate over s. Faster than 87.05% of solutions.
 

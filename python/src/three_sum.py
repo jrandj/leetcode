@@ -3,13 +3,16 @@ from typing import List
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
-        """Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k,
+        """
+        Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k,
         and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
         Notice that the solution set must not contain duplicate triplets.
 
         :param nums: The input list.
-        :return List[List[int]: The output list of lists.
+        :type nums: List[int].
+        :return: The output list of lists.
+        :rtype: List[List[int]].
 
         The time complexity is O(N*LOG(N) + N^2) as we use sort and iterate through nums twice. Faster than 71.07% of
         solutions.

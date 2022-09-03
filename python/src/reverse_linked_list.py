@@ -7,6 +7,12 @@ class ListNode:
     """
 
     def __init__(self, x):
+        """
+        Initialise the ListNode.
+
+        :param x: The value of the ListNode.
+        :type x: Int.
+        """
         self.val = x
         self.next = None
 
@@ -18,10 +24,12 @@ class Solution:
 
     def reverseList_iterative(self, head: Optional[ListNode]) -> Optional[ListNode]:
         """
-         Given the head of a singly linked list, reverse the list, and return the reversed list.
+        Given the head of a singly linked list, reverse the list, and return the reversed list.
 
         :param head: The head of the linked list.
-        :return ListNode: The head of the reversed linked list.
+        :type head: ListNode.
+        :return: The head of the reversed linked list.
+        :rtype: ListNode.
 
         The time complexity is O(N) where N is the length of the list. Faster than 7.86% of solutions.
 
@@ -47,7 +55,9 @@ class Solution:
         Given the head of a singly linked list, reverse the list, and return the reversed list.
 
         :param head: The head of the linked list.
-        :return ListNode: The head of the reversed linked list.
+        :type head: ListNode.
+        :return: The head of the reversed linked list.
+        :rtype: ListNode.
 
         The time complexity is O(N) where N is the length of the list. Faster than 23.64% of solutions.
 

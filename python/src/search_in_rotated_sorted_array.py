@@ -21,8 +21,11 @@ class Solution:
         or -1 if it is not in nums.
 
         :param nums: An array sorted in ascended order and rotated around a pivot.
+        :type nums: List[int]
         :param target: The value at the pivot index.
-        :return int: The index of target.
+        :type target: Int.
+        :return: The index of target.
+        :rtype: Int.
 
         The time complexity is O(LOG(N)) as we use binary search. Faster than 5.45% of solutions.
 

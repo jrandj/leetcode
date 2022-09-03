@@ -8,8 +8,11 @@ def tree_equality_helper(h1: Optional[TreeNode], h2: Optional[TreeNode]):
     Compare 2 trees for equality.
 
     :param h1: The head of the first tree.
+    :type h1: TreeNode.
     :param h2: The head of the second tree.
-    :return bool: True if equal, false otherwise.
+    :type h2: TreeNode.
+    :return: True if the trees are equal, and false otherwise.
+    :rtype: Bool.
 
     The time complexity is O(N) where N is the number of nodes in the tree.
 

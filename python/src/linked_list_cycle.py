@@ -7,6 +7,12 @@ class ListNode:
     """
 
     def __init__(self, x):
+        """
+        Initialise the ListNode.
+
+        :param x:  The value of the node.
+        :type x: Any.
+        """
         self.val = x
         self.next = None
 
@@ -27,7 +33,9 @@ class Solution:
         Return True if there is a cycle in the linked list. Otherwise, return False.
 
         :param head: The head of the linked list.
-        :return bool: True if there is a cycle in the linked list, and False otherwise.
+        :type head: TreeNode.
+        :return: True if there is a cycle in the linked list, and False otherwise.
+        :rtype: Bool.
 
         The time complexity is O(N) where N is the length of the list. Faster than 22.82% of solutions.
 

@@ -30,7 +30,7 @@ class LRUCache:
         Initialise the data structure.
 
         :param capacity: The capacity of the LRU Cache.
-        :return None
+        :type capacity: Int.
         """
         self.capacity = capacity
         # cache will be the dict that contains pointers to key/value pair nodes
@@ -45,10 +45,14 @@ class LRUCache:
 
     def insert(self, node: Node) -> None:
         """
-        Insert a node as the most recently used node. The time and space complexity is O(1).
+        Insert a node as the most recently used node.
 
-        :param node: The node for insertion
-        :return None
+        :param node: The node for insertion.
+        :type node: Node.
+        :return: NoneType.
+        :rtype: NoneType.
+
+        The time and space complexity is O(1).
         """
         # find the end of the list
         prev = self.right.prev
@@ -61,10 +65,14 @@ class LRUCache:
 
     def remove(self, node: Node) -> None:
         """
-        Remove a node from the list. The time and space complexity is O(1).
+        Remove a node from the list.
 
-        :param node: The node for insertion
-        :return None
+        :param node: The node for insertion.
+        :type node: Node.
+        :return: NoneType.
+        :rtype: NoneType.
+
+        The time and space complexity is O(1).
         """
         # find the connecting nodes
         prev = node.prev
@@ -76,10 +84,14 @@ class LRUCache:
 
     def get(self, key: int) -> int:
         """
-        Get the value from the cache. The time and space complexity is O(1).
+        Get the value from the cache.
 
         :param key: The key associated with the value.
-        :return int: The value.
+        :type key: Int.
+        :return: The value.
+        :rtype: Int.
+
+        The time and space complexity is O(1).
         """
         if key in self.cache:
             # it needs to be removed and inserted as it is now the most recently used node
@@ -91,11 +103,16 @@ class LRUCache:
 
     def put(self, key: int, value: int) -> None:
         """
-        Insert a key-value pair into the cache. The time and space complexity is O(1).
+        Insert a key-value pair into the cache.
 
         :param key: The key.
+        :type key: Int.
         :param value: The value.
-        :return None
+        :type value: Int.
+        :return: NoneType.
+        :rtype: NoneType.
+
+        The time and space complexity is O(1).
         """
         # need to reinsert if already present
         if key in self.cache:

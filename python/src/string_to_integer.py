@@ -27,7 +27,9 @@ class Solution:
         atoi function).
 
         :param s: The input string.
-        :return int: The integer output after conversion.
+        :type s: Str.
+        :return: The integer output after conversion.
+        :rtype: Int.
 
         The time complexity is O(N) as we iterate through s once. Faster than 33.20% of solutions.
 

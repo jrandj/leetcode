@@ -11,8 +11,11 @@ class TreeNode:
         Initialise a Tree.
 
         :param val: The value of the node.
+        :type val: Int.
         :param left: The node to the left of the current node.
+        :type left: TreeNode, NoneType.
         :param right: The node to the right of the current node.
+        :type right: TreeNode, NoneType.
         """
         self.val = val
         self.left = left
@@ -32,7 +35,9 @@ class Solution:
         Given the root of a binary tree, return its maximum depth.
 
         :param root: The root node of the tree.
-        :return int: The maximum depth of the tree.
+        :type root: TreeNode.
+        :return: The maximum depth of the tree.
+        :rtype: Int.
 
         The time complexity is O(N) as we visit all nodes. Faster than 23.32% of solutions.
 

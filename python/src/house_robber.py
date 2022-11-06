@@ -50,7 +50,7 @@ class Solution:
         if memo[i]:
             result = memo[i]
         else:
-            # we can rob the current house and get i - 2 or do not rob and get i - 1
+            # we can rob the current house and get i - 2 or not rob and get i - 1
             result = max(self.helper(nums, i - 2, memo) + nums[i], self.helper(nums, i - 1, memo))
             memo[i] = result
 
@@ -79,7 +79,7 @@ class Solution:
         prev1, prev2 = 0, 0
 
         for num in nums:
-            # we can rob the current house and get i - 2 or do not rob and get i - 1
+            # we can rob the current house and get i - 2 or not rob and get i - 1
             tmp = max(prev2 + num, prev1)
             # move the pointers forward
             prev2 = prev1

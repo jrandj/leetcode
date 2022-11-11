@@ -22,7 +22,6 @@ class Solution:
 
         # window approach
         for right_index, right_char in enumerate(s):
-
             # skip over duplicates
             while right_char in char_set:
                 char_set.remove(s[left_index])

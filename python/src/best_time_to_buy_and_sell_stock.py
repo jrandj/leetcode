@@ -22,7 +22,6 @@ class Solution:
         max_profit, left_pointer, right_pointer = 0, 0, 1
 
         while right_pointer < len(prices):
-
             # check if profitable
             if prices[left_pointer] < prices[right_pointer]:
                 profit = prices[right_pointer] - prices[left_pointer]

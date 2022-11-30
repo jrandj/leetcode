@@ -29,6 +29,5 @@ class Tests(unittest.TestCase):
         self.assertEqual(test_result, actual_result.longestPalindrome(s))
 
 
-
 if __name__ == "__main__":
     unittest.main()

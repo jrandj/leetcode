@@ -15,3 +15,7 @@ class Tests(unittest.TestCase):
         test_result = [["Q"]]
         actual_result = Solution()
         self.assertCountEqual(test_result, actual_result.solveNQueens(n))
+
+
+if __name__ == '__main__':
+    unittest.main()

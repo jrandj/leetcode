@@ -63,3 +63,7 @@ class Tests(unittest.TestCase):
         test_result = 4
         actual_result = Solution()
         self.assertEqual(test_result, actual_result.maxProduct_dynamic(nums))
+
+
+if __name__ == '__main__':
+    unittest.main()

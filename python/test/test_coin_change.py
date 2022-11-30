@@ -59,3 +59,7 @@ class Tests(unittest.TestCase):
         test_result = 20
         actual_result = Solution()
         self.assertEqual(test_result, actual_result.coinChange_iterative(coins, amount))
+
+
+if __name__ == '__main__':
+    unittest.main()

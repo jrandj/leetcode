@@ -28,3 +28,7 @@ class Tests(unittest.TestCase):
         test_result = 6
         actual_result = Solution()
         self.assertEqual(test_result, actual_result.countSubstrings_2(s))
+
+
+if __name__ == '__main__':
+    unittest.main()

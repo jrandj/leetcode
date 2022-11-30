@@ -16,3 +16,7 @@ class Tests(unittest.TestCase):
         test_result = 6
         actual_result = Solution()
         self.assertEqual(test_result, actual_result.minCostClimbingStairs(cost))
+
+
+if __name__ == '__main__':
+    unittest.main()

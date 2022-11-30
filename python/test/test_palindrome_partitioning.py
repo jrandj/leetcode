@@ -14,3 +14,7 @@ class Tests(unittest.TestCase):
         test_result = [["a"]]
         actual_result = Solution()
         self.assertCountEqual(test_result, actual_result.partition(s))
+
+
+if __name__ == '__main__':
+    unittest.main()

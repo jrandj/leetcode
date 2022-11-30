@@ -21,3 +21,7 @@ class Tests(unittest.TestCase):
         test_result = ["a", "b", "c"]
         actual_result = Solution()
         self.assertCountEqual(test_result, actual_result.letterCombinations(digits))
+
+
+if __name__ == '__main__':
+    unittest.main()

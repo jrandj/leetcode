@@ -65,7 +65,6 @@ class Solution:
         for n in nums:
             count[n] = 1 + count.get(n, 0)
 
-        print(f"count.items() is {count.items()}")
         for n, c in count.items():
             freq[c].append(n)
 

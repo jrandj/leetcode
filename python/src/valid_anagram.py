@@ -15,7 +15,7 @@ class Solution:
         :param t: The second string.
         :type t: Str.
         :return: True if t is an anagram of s, and False otherwise.
-        :rtype: Bool
+        :rtype: Bool.
 
         The time complexity is O(t + s) as we iterate through both. Faster than 25.65% of solutions.
 

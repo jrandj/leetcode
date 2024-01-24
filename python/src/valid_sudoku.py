@@ -33,7 +33,7 @@ class Solution:
 
         for r in range(len(board[0])):
             for c in range(len(board)):
-                # we don't need to check if it is emtpy
+                # we don't need to check if it is empty
                 if board[r][c] == ".":
                     continue
                 if (board[r][c] in rows[r] or

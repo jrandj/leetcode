@@ -24,3 +24,7 @@ class Tests(unittest.TestCase):
         test_result = False
         actual_result = Solution()
         self.assertEqual(test_result, actual_result.checkInclusion(s1, s2))
+
+
+if __name__ == '__main__':
+    unittest.main()

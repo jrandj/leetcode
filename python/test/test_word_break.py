@@ -46,3 +46,7 @@ class Tests(unittest.TestCase):
         wordDict = ["a", "aa", "aaa", "aaaa", "aaaaa", "aaaaaa", "aaaaaaa", "aaaaaaaa", "aaaaaaaaa", "aaaaaaaaaa"]
         actual_result = Solution()
         self.assertFalse(actual_result.wordBreak_iterative(s, wordDict))
+
+
+if __name__ == '__main__':
+    unittest.main()

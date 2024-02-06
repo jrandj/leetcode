@@ -70,3 +70,7 @@ class Tests(unittest.TestCase):
         trn1 = ListNode(2)
         actual_result = Solution()
         self.assertTrue(list_equality_helper(trn1, actual_result.removeNthFromEnd(l1n1, n)))
+
+
+if __name__ == '__main__':
+    unittest.main()
